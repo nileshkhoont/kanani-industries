@@ -1,0 +1,166 @@
+[
+  {
+    "id": "janap-toor-savaj",
+    "slug": "janap-toor-savaj-brand",
+    "name": "Janap Toor",
+    "brand": "Savaj Brand",
+    "shortDescription": "Flagship Gujarat Sortex yellow toor dal with uniform golden split grains, high protein, and quick-cooking tenderness.",
+    "description": "Janap Toor under our trusted Savaj Brand represents our signature grade of Sortex-processed pigeon peas. Sourced directly from premier pulse-growing agrarian clusters of Saurashtra and Gujarat, each grain undergoes rigorous multi-stage cleaning and computerized optical color sorting to eliminate discolored seeds, stones, and chaff.\n\nKnown for its radiant golden-yellow hue, consistent split diameter, and fast boiling time, Savaj Brand Janap Toor yields an exceptionally creamy texture and authentic aroma. Ideal for everyday household cooking, heritage Gujarati dal preparation, and high-volume commercial catering.\n\nHygienically processed and packed with zero artificial colors or synthetic glazing, delivering wholesome plant-based nutrition and high dietary fiber in every serving.",
+    "price": 165,
+    "mrp": 195,
+    "unit": "kg",
+    "packSizes": [
+      1,
+      5,
+      25
+    ],
+    "images": [
+      "/images/products/janap-toor-savaj/main.jpg",
+      "/images/products/janap-toor-savaj/alt-1.jpg",
+      "/images/products/janap-toor-savaj/alt-2.jpg"
+    ],
+    "badges": [
+      "Bestseller",
+      "Sortex Cleaned"
+    ],
+    "highlights": [
+      "Advanced Sortex optical color sorted",
+      "Rich in natural plant protein (22g / 100g)",
+      "Zero added colors, chemicals, or mineral oil",
+      "Cooks quickly with uniform texture"
+    ],
+    "nutritionPer100g": {
+      "energyKcal": 343,
+      "proteinG": 22,
+      "carbsG": 62.7,
+      "fiberG": 15,
+      "fatG": 1.5
+    },
+    "shelfLife": "12 months",
+    "inStock": true,
+    "updatedAt": "2026-10-13T13:18:26.378Z"
+  },
+  {
+    "id": "varjin-toor-ganesh",
+    "slug": "varjin-toor-ganesh-brand",
+    "name": "Varjin Toor",
+    "brand": "Ganesh Brand",
+    "shortDescription": "Traditional heritage grade toor dal celebrated for its comforting nutty flavor, balanced sweetness, and rich gravy body.",
+    "description": "Varjin Toor under Ganesh Brand brings the time-tested authenticity of traditional Gujarati kitchens. Selected from carefully sun-cured pigeon pea pods, this variety is milled using precision dehusking techniques that preserve the natural germ layer and key nutrients.\n\nOur Sortex optical sensors scrutinize every batch, removing immature or damaged kernels while safeguarding grain integrity. In the pot, Ganesh Brand Varjin Toor breaks down into a thick, velvety consistency that seamlessly absorbs spices, mustard seeds, and jaggery.\n\nPackaged in moisture-resistant barrier pouches and heavy-duty bags, it remains naturally fresh and insect-free throughout its 12-month shelf life.",
+    "price": 155,
+    "mrp": 180,
+    "unit": "kg",
+    "packSizes": [
+      1,
+      5,
+      25
+    ],
+    "images": [
+      "/images/products/varjin-toor-ganesh/main.jpg",
+      "/images/products/varjin-toor-ganesh/alt-1.jpg",
+      "/images/products/varjin-toor-ganesh/alt-2.jpg"
+    ],
+    "badges": [
+      "Heritage Choice",
+      "Value Pack"
+    ],
+    "highlights": [
+      "Traditional taste and rich velvety body",
+      "Cleaned through magnetic and optical sorters",
+      "Naturally high dietary fiber for digestion",
+      "Consistent grain size with minimal broken pieces"
+    ],
+    "nutritionPer100g": {
+      "energyKcal": 339,
+      "proteinG": 21.5,
+      "carbsG": 63.2,
+      "fiberG": 15.4,
+      "fatG": 1.4
+    },
+    "shelfLife": "12 months",
+    "inStock": true,
+    "updatedAt": "2026-10-13T10:00:00.000Z"
+  },
+  {
+    "id": "bidian-toor-nilkanth",
+    "slug": "bidian-toor-nilkanth-brand",
+    "name": "Bidian Toor",
+    "brand": "Nilkanth Brand",
+    "shortDescription": "Bold, plump grain Sortex toor dal crafted for festive celebrations, special feasts, and rich, aromatic restaurant-style preparations.",
+    "description": "Nilkanth Brand Bidian Toor is our premium bold-grain selection, curated specifically for pulse connoisseurs and caterers demanding immaculate grain appearance and full-bodied presence.\n\nOnly the plumpest pigeon peas make it into our Nilkanth Brand processing lines. The seeds undergo dual Sortex color passes that inspect both surface hue and internal density, rejecting any grain that does not meet our strict grade threshold.\n\nUpon cooking, Nilkanth Bidian Toor retains subtle grain structure while delivering a luscious melt-in-the-mouth texture. It holds temperings beautifully and provides robust sustenance in Dal Tadka, Dal Fry, and festive lentil delicacies.",
+    "price": 175,
+    "mrp": 210,
+    "unit": "kg",
+    "packSizes": [
+      1,
+      5,
+      25
+    ],
+    "images": [
+      "/images/products/bidian-toor-nilkanth/main.jpg",
+      "/images/products/bidian-toor-nilkanth/alt-1.jpg",
+      "/images/products/bidian-toor-nilkanth/alt-2.jpg"
+    ],
+    "badges": [
+      "Premium Bold",
+      "Export Quality"
+    ],
+    "highlights": [
+      "Extra bold grain size with golden luster",
+      "Double Sortex color sorted for 99.8% purity",
+      "Superior aroma retention upon pressure cooking",
+      "Ideal for weddings, hotels, and festive thalis"
+    ],
+    "nutritionPer100g": {
+      "energyKcal": 348,
+      "proteinG": 22.8,
+      "carbsG": 61.8,
+      "fiberG": 14.8,
+      "fatG": 1.6
+    },
+    "shelfLife": "12 months",
+    "inStock": true,
+    "updatedAt": "2026-10-13T10:00:00.000Z"
+  },
+  {
+    "id": "rasdi-toor-natural",
+    "slug": "rasdi-toor-natural-brand",
+    "name": "Rasdi Toor",
+    "brand": "Natural Brand",
+    "shortDescription": "Unpolished, naturally processed toor dal retaining maximum bran fiber, vitamins, and authentic rustic earthy taste.",
+    "description": "Rasdi Toor under Natural Brand is dedicated to clean, unadulterated eating. Unlike conventional commercial dals that receive surface oil or water polishing for artificial shine, Natural Brand Rasdi Toor is packaged in its raw, unpolished state.\n\nBy omitting water polishing, the natural dietary fibers, micro-minerals, and vital nutrients remain intact on the grain coat. The pigeon peas are thoroughly cleaned using gentle aspirators, gravity separators, and state-of-the-art Sortex optical sorting.\n\nRasdi Toor delivers an intensely rustic, wholesome, and earthy aroma with a deep wholesome broth that nourishes the entire family. Perfect for health-conscious homes, wellness diets, and rustic village-style curries.",
+    "price": 185,
+    "mrp": 225,
+    "unit": "kg",
+    "packSizes": [
+      1,
+      5,
+      25
+    ],
+    "images": [
+      "/images/products/rasdi-toor-natural/main.jpg",
+      "/images/products/rasdi-toor-natural/alt-1.jpg",
+      "/images/products/rasdi-toor-natural/alt-2.jpg"
+    ],
+    "badges": [
+      "100% Unpolished",
+      "Health Select"
+    ],
+    "highlights": [
+      "100% unpolished with zero artificial glazing or oil",
+      "Maximum natural fiber and micro-nutrient retention",
+      "Cleaned purely by mechanical & optical Sortex methods",
+      "Earthy, wholesome flavor and natural sweetness"
+    ],
+    "nutritionPer100g": {
+      "energyKcal": 341,
+      "proteinG": 22.4,
+      "carbsG": 62,
+      "fiberG": 16.2,
+      "fatG": 1.3
+    },
+    "shelfLife": "12 months",
+    "inStock": true,
+    "updatedAt": "2026-10-13T10:00:00.000Z"
+  }
+]

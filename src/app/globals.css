@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import "../styles/theme.css";
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-secondary-light);
+    color: var(--color-primary-dark);
+  }
+}
+
+/* Reusable brand utility classes mapping strictly to theme variables */
+.bg-gradient-brand {
+  background: var(--gradient-brand);
+}
+
+.bg-gradient-leaf {
+  background: var(--gradient-leaf);
+}
+
+.bg-gradient-gold {
+  background: var(--gradient-gold);
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.shadow-navy-sm {
+  box-shadow: var(--shadow-navy-sm);
+}
+
+.shadow-navy-md {
+  box-shadow: var(--shadow-navy-md);
+}
+
+.shadow-navy-lg {
+  box-shadow: var(--shadow-navy-lg);
+}
+
+.shadow-navy-xl {
+  box-shadow: var(--shadow-navy-xl);
+}
+
+.glass-header {
+  background: var(--glass-header-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--glass-header-border);
+}
+
+.glass-card {
+  background: var(--glass-card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-card-border);
+}
+
+.glass-dark-card {
+  background: var(--glass-dark-card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-dark-card-border);
+}
+
+/* Golden price highlight pill matching brand guideline */
+.price-pill {
+  background: var(--gradient-gold);
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-gold-pill);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
