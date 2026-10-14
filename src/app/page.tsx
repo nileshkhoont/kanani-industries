@@ -11,6 +11,9 @@ import { GlobalReach } from '@/components/home/GlobalReach';
 import { RecipeTeaser } from '@/components/home/RecipeTeaser';
 import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function HomePage() {
   const products = await getAllProducts();
 

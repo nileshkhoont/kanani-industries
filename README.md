@@ -102,11 +102,11 @@ All 4 signature brand lines are maintained in [`src/data/products.json`](file://
 3. **Bidian Toor Dal (Nilkanth Brand)** — Medium split, catering & wholesale
 4. **Rasdi Toor Dal (Natural Brand)** — Premium unpolished, organic export line
 
-### Atomic File Storage & Adapter Swapping
-Price updates from the admin dashboard are handled by [`src/lib/storage.ts`](file:///D:/Kanani%20Industries/src/lib/storage.ts) using an atomic write-and-rename mechanism (`fs.promises.rename`) that prevents file corruption under concurrent writes.
-
-> **Production Swapping Note:**  
-> For serverless deployments on platforms with read-only filesystems (e.g., AWS Lambda, Vercel), swap the file implementation in `src/lib/storage.ts` with **Vercel KV**, **Upstash Redis**, **PostgreSQL (Prisma/Drizzle)**, or **MongoDB**. The interface `getProduct(id)` and `updateProductPrice(id, price)` remains identical.
+### Storage & Vercel Serverless Compatibility
+Price updates are handled by [`src/lib/storage.ts`](file:///D:/Kanani%20Industries/src/lib/storage.ts) with built-in multi-environment support:
+1. **Local & Dedicated Server:** Writes atomically to `src/data/products.json`.
+2. **Vercel / Serverless (`/tmp`):** In read-only serverless lambdas (`/var/task`), it automatically seeds and diverts writes to `os.tmpdir()` (`/tmp/kanani-products.json`), preventing `EROFS: read-only file system` errors without any configuration.
+3. **Persistent Cloud Storage (Vercel KV / Upstash Redis):** To persist price updates across all serverless regions and instances indefinitely, simply create a free **Upstash / Vercel KV** store in your Vercel Dashboard under the **Storage** tab. `storage.ts` automatically detects `KV_REST_API_URL` and `KV_REST_API_TOKEN` and switches to cloud storage with zero code changes.
 
 ---
 

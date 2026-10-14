@@ -2,8 +2,12 @@ import { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { getAllProducts } from '@/lib/products';
+import { getStorageMode } from '@/lib/storage';
 import { verifyAdminToken, JWT_COOKIE_NAME } from '@/lib/auth';
 import { AdminDashboard } from '@/components/admin/AdminDashboard';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: 'Admin Price Dashboard',
@@ -27,10 +31,15 @@ export default async function AdminPage() {
   }
 
   const products = await getAllProducts();
+  const storageMode = getStorageMode();
 
   return (
     <div className="min-h-screen bg-surface py-6">
-      <AdminDashboard initialProducts={products} username={payload.username} />
+      <AdminDashboard
+        initialProducts={products}
+        username={payload.username}
+        storageMode={storageMode}
+      />
     </div>
   );
 }

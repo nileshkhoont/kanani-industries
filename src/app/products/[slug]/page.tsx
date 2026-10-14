@@ -4,6 +4,9 @@ import { getAllProducts, getProductBySlug } from '@/lib/products';
 import { ProductDetailView } from '@/components/product/ProductDetailView';
 import { siteConfig } from '@/config/site';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface ProductDetailPageProps {
   params: Promise<{ slug: string }>;
 }

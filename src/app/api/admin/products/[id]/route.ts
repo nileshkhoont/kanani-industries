@@ -76,7 +76,9 @@ export async function PATCH(
     const storage = getStorage();
     const { updatedProduct } = await storage.updateProductPrice(id, { price, mrp });
 
-    // 7. On-demand cache revalidation for instant reflection
+    // 7. On-demand cache revalidation for instant reflection across entire site
+    revalidatePath('/admin', 'page');
+    revalidatePath('/admin');
     revalidatePath('/', 'page');
     revalidatePath('/products', 'page');
     revalidatePath(`/products/${existingProduct.slug}`, 'page');

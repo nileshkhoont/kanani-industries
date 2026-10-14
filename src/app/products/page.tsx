@@ -3,6 +3,9 @@ import { getAllProducts } from '@/lib/products';
 import { ProductListing } from '@/components/product/ProductListing';
 import { Sparkles } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: 'Our Sortex Toor Dal Brands | Buy Online & Bulk Orders',
   description:

@@ -19,9 +19,14 @@ import { Logo } from '@/components/ui/Logo';
 interface AdminDashboardProps {
   initialProducts: Product[];
   username: string;
+  storageMode?: 'cloud' | 'ephemeral';
 }
 
-export function AdminDashboard({ initialProducts, username }: AdminDashboardProps) {
+export function AdminDashboard({
+  initialProducts,
+  username,
+  storageMode = 'ephemeral',
+}: AdminDashboardProps) {
   const router = useRouter();
   const [products, setProducts] = useState<Product[]>(initialProducts);
   const [editedPrices, setEditedPrices] = useState<Record<string, string>>(() => {
@@ -187,6 +192,54 @@ export function AdminDashboard({ initialProducts, username }: AdminDashboardProp
             <AlertCircle className="w-5 h-5 shrink-0" />
           )}
           <span>{toast.message}</span>
+        </div>
+      )}
+
+      {/* Storage Mode Banner */}
+      {storageMode === 'ephemeral' ? (
+        <div className="mb-8 p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="font-heading font-bold text-sm text-amber-900">
+                  Storage Status: Temporary Serverless /tmp (Not Persistent Across Refreshes)
+                </span>
+                <span className="px-2 py-0.5 rounded-full bg-amber-200/80 text-amber-800 font-bold text-[10px] uppercase">
+                  Action Recommended
+                </span>
+              </div>
+              <p className="text-xs text-amber-800/90 mt-1 max-w-3xl">
+                On Vercel, serverless containers are stateless and reset when instances restart. To make price updates <strong>permanently saved</strong> across page refreshes and all visitors, connect <strong>Vercel KV (Upstash Redis)</strong> in your Vercel Project under <em>Storage &rarr; Create Database &rarr; KV</em>.
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://vercel.com/dashboard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs inline-flex items-center gap-1.5 transition-colors shadow-sm"
+          >
+            <span>Open Vercel Storage</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
+      ) : (
+        <div className="mb-8 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-950 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+            <div>
+              <span className="font-heading font-bold text-sm text-emerald-900">
+                Permanent Cloud Storage Active
+              </span>
+              <p className="text-xs text-emerald-800/90 mt-0.5">
+                Connected to Vercel KV / Upstash Redis. All price updates are permanently synced worldwide.
+              </p>
+            </div>
+          </div>
+          <span className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs">
+            100% Persistent
+          </span>
         </div>
       )}
 
