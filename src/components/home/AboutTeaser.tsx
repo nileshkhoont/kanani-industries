@@ -47,7 +47,7 @@ export function AboutTeaser() {
             </div>
 
             <p className="text-base text-ink-muted leading-relaxed">
-              Founded in Gondal, the pulse capital of Saurashtra, Kanani Industries has grown from a
+              Founded in Junagadh, the pulse capital of Saurashtra, Kanani Industries has grown from a
               regional grain trading firm into an integrated processor, brand holder, and international
               exporter. We bridge the distance between honest farming families and modern dinner tables.
             </p>
@@ -74,7 +74,7 @@ export function AboutTeaser() {
               <div className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <span className="text-sm font-semibold text-primary-dark">
-                  Custom Bulk Export Packing (25kg, 30kg &amp; 50kg)
+                  Heavy-Duty Wholesale Packing (1kg, 5kg &amp; 25kg)
                 </span>
               </div>
             </div>

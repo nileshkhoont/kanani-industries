@@ -4,7 +4,6 @@ import { siteConfig } from '@/config/site';
 import {
   MapPin,
   Phone,
-  Mail,
   ArrowRight,
   ShieldCheck,
   CheckCircle2,
@@ -79,15 +78,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/export" className="hover:text-accent transition-colors flex items-center gap-1.5">
+                <Link href="/contact" className="hover:text-accent transition-colors flex items-center gap-1.5">
                   <ArrowRight className="w-3 h-3 text-secondary-light" />
-                  Global Export Desk
-                </Link>
-              </li>
-              <li>
-                <Link href="/recipes" className="hover:text-accent transition-colors flex items-center gap-1.5">
-                  <ArrowRight className="w-3 h-3 text-secondary-light" />
-                  Toor Dal Recipes
+                  Contact &amp; Enquiry
                 </Link>
               </li>
             </ul>
@@ -145,15 +138,6 @@ export function Footer() {
                   className="text-xs hover:text-accent transition-colors"
                 >
                   {siteConfig.contact.displayPhone}
-                </a>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-secondary-light shrink-0" />
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="text-xs hover:text-accent transition-colors"
-                >
-                  {siteConfig.contact.email}
                 </a>
               </div>
 

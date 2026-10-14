@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
-import { ShoppingBag, Menu, X, PhoneCall, Globe2 } from 'lucide-react';
+import { Menu, X, PhoneCall } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
 import { AnnouncementBar } from './AnnouncementBar';
-import { useCartStore, getCartItemCount } from '@/store/cart';
 import { siteConfig } from '@/config/site';
 
 const navLinks = [
@@ -15,8 +14,6 @@ const navLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Products', href: '/products' },
   { name: 'Sortex Quality', href: '/quality' },
-  { name: 'Import & Export', href: '/export' },
-  { name: 'Recipes', href: '/recipes' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -24,12 +21,6 @@ export function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const items = useCartStore((state) => state.items);
-  const hasHydrated = useCartStore((state) => state.hasHydrated);
-  const openDrawer = useCartStore((state) => state.openDrawer);
-
-  const itemCount = hasHydrated ? getCartItemCount(items) : 0;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,34 +72,15 @@ export function Header() {
               })}
             </nav>
 
-            {/* Actions: Cart, Phone, Mobile Menu Toggle */}
+            {/* Actions: Contact Us with Phone & Mobile Hamburger */}
             <div className="flex items-center gap-2.5 sm:gap-3">
-              {/* Quick Export CTA on desktop */}
-              <Link
-                href="/export"
-                className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-surface-alt text-primary hover:bg-primary hover:text-white border border-primary/20 transition-all duration-200"
+              <a
+                href={`tel:${siteConfig.contact.phone}`}
+                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-brand text-white text-xs font-bold shadow-navy-xs hover:shadow-navy-sm hover:brightness-105 transition-all active:scale-98"
               >
-                <Globe2 className="w-3.5 h-3.5 text-secondary" />
-                <span>Bulk Export</span>
-              </Link>
-
-              {/* Cart Drawer Trigger */}
-              <button
-                onClick={openDrawer}
-                aria-label={`Open shopping cart with ${itemCount} items`}
-                className="relative p-2.5 rounded-full bg-white hover:bg-surface-alt text-primary-dark shadow-navy-xs border border-border transition-all duration-200 hover:scale-105 active:scale-95"
-              >
-                <ShoppingBag className="w-5 h-5 text-primary" />
-                {itemCount > 0 && (
-                  <motion.span
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-secondary text-white font-bold text-[10px] flex items-center justify-center shadow-sm"
-                  >
-                    {itemCount > 99 ? '99+' : itemCount}
-                  </motion.span>
-                )}
-              </button>
+                <PhoneCall className="w-3.5 h-3.5" />
+                <span>Contact Us: {siteConfig.contact.displayPhone}</span>
+              </a>
 
               {/* Mobile Menu Hamburger */}
               <button
@@ -164,12 +136,11 @@ export function Header() {
                     <span>Call: {siteConfig.contact.displayPhone}</span>
                   </Link>
                   <Link
-                    href="/export"
+                    href="/contact"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-brand text-white font-semibold text-sm shadow-navy-sm"
                   >
-                    <Globe2 className="w-4 h-4 text-accent" />
-                    <span>Export Enquiry</span>
+                    <span>Contact Us</span>
                   </Link>
                 </div>
               </div>

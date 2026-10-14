@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { siteConfig } from '@/config/site';
 import { Award, Users, TrendingUp, Globe2 } from 'lucide-react';
+import { GoldenDalAtmosphere } from '@/components/ui/GoldenDalAtmosphere';
 
 interface StatItem {
   icon: typeof Award;
@@ -66,11 +67,8 @@ export function StatsSection() {
 
   return (
     <section ref={containerRef} className="py-16 md:py-24 bg-primary-dark text-white relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-secondary blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-accent blur-3xl" />
-      </div>
+      {/* Unified Golden Toor Dal Atmosphere Animation */}
+      <GoldenDalAtmosphere density="ambient" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Logo } from '@/components/ui/Logo';
-import { Home, ShoppingBag } from 'lucide-react';
+import { Home, Package } from 'lucide-react';
 
 export default function NotFound() {
   return (
@@ -35,7 +35,7 @@ export default function NotFound() {
               href="/products"
               className="flex-1 py-3 px-4 rounded-xl bg-surface-alt hover:bg-surface text-primary-dark font-heading font-bold text-xs border border-border flex items-center justify-center gap-2 transition-colors"
             >
-              <ShoppingBag className="w-4 h-4 text-secondary" />
+              <Package className="w-4 h-4 text-secondary" />
               <span>Browse Dals</span>
             </Link>
           </div>

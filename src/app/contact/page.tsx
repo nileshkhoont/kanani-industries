@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import {
   MapPin,
   Phone,
-  Mail,
   Clock,
   MessageCircle,
   PhoneCall,
@@ -11,9 +10,9 @@ import { siteConfig } from '@/config/site';
 import { ContactForm } from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Gondal Milling Facility & Sales Desk',
+  title: 'Contact Us | Junagadh Milling Facility & Sales Desk',
   description:
-    'Get in touch with Kanani Industries in Gondal, Gujarat. Phone, email, address, Google Maps directions, and WhatsApp trade support.',
+    'Get in touch with Kanani Industries in Junagadh, Gujarat. Phone, address, Google Maps directions, and WhatsApp trade support.',
 };
 
 export default function ContactPage() {
@@ -34,7 +33,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-sm sm:text-base text-ink-muted mt-2 max-w-2xl">
             Whether you run a regional wholesale mandi shop, a supermarket chain, or an overseas
-            import desk, our Gondal headquarters is ready to assist you.
+            import desk, our Junagadh headquarters is ready to assist you.
           </p>
         </div>
 
@@ -68,25 +67,12 @@ export default function ContactPage() {
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-secondary-light shrink-0" />
                   <div>
-                    <span className="text-[11px] text-white/60 block">Direct Line</span>
+                    <span className="text-[11px] text-white/60 block">Direct Line &amp; WhatsApp</span>
                     <a
                       href={`tel:${siteConfig.contact.phone}`}
                       className="font-bold text-white hover:text-accent transition-colors"
                     >
                       {siteConfig.contact.displayPhone}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-secondary-light shrink-0" />
-                  <div>
-                    <span className="text-[11px] text-white/60 block">Email Inquiries</span>
-                    <a
-                      href={`mailto:${siteConfig.contact.email}`}
-                      className="font-bold text-white hover:text-accent transition-colors"
-                    >
-                      {siteConfig.contact.email}
                     </a>
                   </div>
                 </div>

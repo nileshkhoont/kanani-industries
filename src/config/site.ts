@@ -54,9 +54,9 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "Kanani Industries",
   legalName: "Kanani Industries Pvt. Ltd.",
-  tagline: "Sortex Toor Trading | Import & Export",
+  tagline: "Premier Sortex Toor Dal Milling & Trading",
   description:
-    "Leading Gujarat-based processor, trader, and global exporter of premium Sortex-cleaned Toor Dal (Pigeon Peas) under our own trusted brands: Savaj, Ganesh, Nilkanth, and Natural.",
+    "Leading Gujarat-based processor and trader of premium Sortex-cleaned Toor Dal (Pigeon Peas) under our own trusted brands: Savaj, Ganesh, Nilkanth, and Natural.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://kananiindustries.com",
   logo: {
     main: "/brand/kanani-logo.png",
@@ -66,26 +66,22 @@ export const siteConfig: SiteConfig = {
     appleIcon: "/apple-icon.png",
   },
   contact: {
-    // [PLACEHOLDER - REPLACE WITH ACTUAL BUSINESS PHONE]
-    phone: "+919876543210",
-    displayPhone: "+91 98765 43210",
-    // [PLACEHOLDER - REPLACE WITH ACTUAL WHATSAPP NUMBER FOR ORDERS]
-    whatsappNumber: "919876543210",
-    displayWhatsapp: "+91 98765 43210",
-    // [PLACEHOLDER - REPLACE WITH ACTUAL BUSINESS EMAIL]
-    email: "info@kananiindustries.com",
+    phone: "+918000004462",
+    displayPhone: "+91 80000 04462",
+    whatsappNumber: "918000004462",
+    displayWhatsapp: "+91 80000 04462",
+    email: "",
     address: {
-      // [PLACEHOLDER - REPLACE WITH ACTUAL FACILITY ADDRESS]
-      line1: "Plot No. 42-45, GIDC Industrial Estate",
-      line2: "Junagadh National Highway Bypass",
-      city: "Gondal",
+      line1: "Plot No 103(a) G.i.d.c.-1",
+      line2: "Dolatpara",
+      city: "Junagadh",
       state: "Gujarat",
-      pincode: "360311",
+      pincode: "362001",
       country: "India",
-      full: "Plot No. 42-45, GIDC Industrial Estate, Junagadh Highway Bypass, Gondal - 360311, Gujarat, India",
+      full: "Plot No 103(a) G.i.d.c.-1 Dolatpara Junagadh(362001), Gujarat, India",
     },
     googleMapsEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118228.31846931557!2d70.73030467711462!3d21.96349372990669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395837651a141979%3A0xb3e56a793a38d706!2sGondal%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+      "https://maps.google.com/maps?q=Plot+No+103(a)+G.i.d.c.-1+Dolatpara+Junagadh+362001+Gujarat+India&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   social: {
     facebook: "https://facebook.com/kananiindustries",
@@ -94,7 +90,6 @@ export const siteConfig: SiteConfig = {
     twitter: "https://twitter.com/kananiind",
     youtube: "https://youtube.com/@kananiindustries",
   },
-  // [PLACEHOLDER - REPLACE WITH REAL HISTORICAL STATS IF DESIRED]
   stats: {
     yearsOfExperience: 28,
     happyCustomers: 15000,
@@ -116,9 +111,9 @@ export const siteConfig: SiteConfig = {
     { name: "South Africa", code: "ZA", region: "Africa", flag: "🇿🇦" },
   ],
   announcements: [
-    "🌾 Fresh Gujarat Crop Sortex Toor Dal Now Ready for Domestic & Bulk Export Dispatch",
+    "🌾 Fresh Gujarat Crop Sortex Toor Dal Now Ready for Wholesale & Retail Dispatch",
     "✨ Multi-Camera Optical Sortex Cleaned: Guaranteed 99.8% Grain Purity",
-    "📦 Heavy-Duty Bulk Packing Available in 25kg, 30kg & 50kg Bags",
+    "📦 Bulk Wholesale & Retail Supply Available Direct From Junagadh Mill",
     "🚚 Fast Dispatch across India | Trusted Direct Miller Pricing",
   ],
   freeShippingThreshold: 1999,

@@ -16,6 +16,33 @@ export interface StorageAdapter {
   ): Promise<{ updatedProduct: unknown; allProducts: unknown[] }>;
 }
 
+function mergeWithBundled(
+  bundled: Array<Record<string, unknown>>,
+  dynamicList: Array<Record<string, unknown>>
+): Array<Record<string, unknown>> {
+  if (!Array.isArray(bundled) || bundled.length === 0) return dynamicList;
+  if (!Array.isArray(dynamicList) || dynamicList.length === 0) return bundled;
+
+  const dynMap = new Map<string, Record<string, unknown>>();
+  for (const item of dynamicList) {
+    if (item && typeof item === 'object' && typeof item.id === 'string') {
+      dynMap.set(item.id, item);
+    }
+  }
+
+  return bundled.map((b) => {
+    const dyn = dynMap.get(b.id as string);
+    if (!dyn) return b;
+    return {
+      ...b,
+      price: dyn.price !== undefined ? dyn.price : b.price,
+      mrp: dyn.mrp !== undefined ? dyn.mrp : b.mrp,
+      inStock: dyn.inStock !== undefined ? dyn.inStock : b.inStock,
+      updatedAt: dyn.updatedAt || b.updatedAt,
+    };
+  });
+}
+
 /**
  * Hybrid file storage that handles local development (src/data/products.json)
  * and serverless / Vercel read-only filesystems (/tmp/kanani-products.json) seamlessly.
@@ -57,7 +84,27 @@ class HybridFileStorageAdapter implements StorageAdapter {
     }
   }
 
+  async readBundledProducts(): Promise<unknown[]> {
+    try {
+      const raw = await fs.readFile(this.bundledFilePath, 'utf-8');
+      return JSON.parse(raw);
+    } catch {
+      return [];
+    }
+  }
+
   async readProducts(): Promise<unknown[]> {
+    if (process.env.NODE_ENV === 'development') {
+      try {
+        const raw = await fs.readFile(this.bundledFilePath, 'utf-8');
+        const parsed = JSON.parse(raw);
+        this.inMemoryCache = parsed;
+        return parsed;
+      } catch (err) {
+        console.error('Error reading bundled products.json:', err);
+      }
+    }
+
     if (this.inMemoryCache && Array.isArray(this.inMemoryCache) && this.inMemoryCache.length > 0) {
       return this.inMemoryCache;
     }
@@ -66,6 +113,12 @@ class HybridFileStorageAdapter implements StorageAdapter {
     try {
       const raw = await fs.readFile(this.activeFilePath, 'utf-8');
       const parsed = JSON.parse(raw);
+      if (this.activeFilePath !== this.bundledFilePath) {
+        const bundled = (await this.readBundledProducts()) as Array<Record<string, unknown>>;
+        const merged = mergeWithBundled(bundled, parsed as Array<Record<string, unknown>>);
+        this.inMemoryCache = merged;
+        return merged;
+      }
       this.inMemoryCache = parsed;
       return parsed;
     } catch {
@@ -188,7 +241,15 @@ class UpstashRedisStorageAdapter implements StorageAdapter {
         if (data && data.result !== null && data.result !== undefined) {
           const parsed = typeof data.result === 'string' ? JSON.parse(data.result) : data.result;
           if (Array.isArray(parsed) && parsed.length > 0) {
-            return parsed;
+            const bundled = (await this.fallback.readBundledProducts()) as Array<Record<string, unknown>>;
+            const merged = mergeWithBundled(bundled, parsed as Array<Record<string, unknown>>);
+            
+            // Check if Redis stored outdated image paths or fields, and resync in background if needed
+            const needsSync = JSON.stringify(parsed) !== JSON.stringify(merged);
+            if (needsSync) {
+              this.saveToRedis(merged).catch((e) => console.warn('Redis sync error:', e));
+            }
+            return merged;
           }
         }
       }

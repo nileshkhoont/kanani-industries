@@ -15,9 +15,9 @@
       25
     ],
     "images": [
-      "/images/products/janap-toor-savaj/main.jpg",
-      "/images/products/janap-toor-savaj/alt-1.jpg",
-      "/images/products/janap-toor-savaj/alt-2.jpg"
+      "/images/products/janap-toor-savaj/dry-toor.jpg",
+      "/images/products/shared/dry-toor-macro.jpg",
+      "/images/products/shared/mill-facility.jpg"
     ],
     "badges": [
       "Bestseller",
@@ -38,7 +38,7 @@
     },
     "shelfLife": "12 months",
     "inStock": true,
-    "updatedAt": "2026-10-13T13:18:26.378Z"
+    "updatedAt": "2026-10-14T10:00:00.000Z"
   },
   {
     "id": "varjin-toor-ganesh",
@@ -56,9 +56,9 @@
       25
     ],
     "images": [
-      "/images/products/varjin-toor-ganesh/main.jpg",
-      "/images/products/varjin-toor-ganesh/alt-1.jpg",
-      "/images/products/varjin-toor-ganesh/alt-2.jpg"
+      "/images/products/varjin-toor-ganesh/dry-toor.jpg",
+      "/images/products/shared/dry-toor-macro.jpg",
+      "/images/products/shared/mill-facility.jpg"
     ],
     "badges": [
       "Heritage Choice",
@@ -79,7 +79,7 @@
     },
     "shelfLife": "12 months",
     "inStock": true,
-    "updatedAt": "2026-10-13T10:00:00.000Z"
+    "updatedAt": "2026-10-14T10:00:00.000Z"
   },
   {
     "id": "bidian-toor-nilkanth",
@@ -97,9 +97,9 @@
       25
     ],
     "images": [
-      "/images/products/bidian-toor-nilkanth/main.jpg",
-      "/images/products/bidian-toor-nilkanth/alt-1.jpg",
-      "/images/products/bidian-toor-nilkanth/alt-2.jpg"
+      "/images/products/bidian-toor-nilkanth/dry-toor.jpg",
+      "/images/products/shared/dry-toor-macro.jpg",
+      "/images/products/shared/mill-facility.jpg"
     ],
     "badges": [
       "Premium Bold",
@@ -120,7 +120,7 @@
     },
     "shelfLife": "12 months",
     "inStock": true,
-    "updatedAt": "2026-10-13T10:00:00.000Z"
+    "updatedAt": "2026-10-14T10:00:00.000Z"
   },
   {
     "id": "rasdi-toor-natural",
@@ -138,9 +138,9 @@
       25
     ],
     "images": [
-      "/images/products/rasdi-toor-natural/main.jpg",
-      "/images/products/rasdi-toor-natural/alt-1.jpg",
-      "/images/products/rasdi-toor-natural/alt-2.jpg"
+      "/images/products/rasdi-toor-natural/dry-toor.jpg",
+      "/images/products/shared/dry-toor-macro.jpg",
+      "/images/products/shared/mill-facility.jpg"
     ],
     "badges": [
       "100% Unpolished",
@@ -161,6 +161,6 @@
     },
     "shelfLife": "12 months",
     "inStock": true,
-    "updatedAt": "2026-10-13T10:00:00.000Z"
+    "updatedAt": "2026-10-14T10:00:00.000Z"
   }
 ]

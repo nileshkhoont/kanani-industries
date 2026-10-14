@@ -4,7 +4,6 @@ import './globals.css';
 import { siteConfig } from '@/config/site';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { CartDrawer } from '@/components/cart/CartDrawer';
 import { FloatingActions } from '@/components/layout/FloatingActions';
 import { LoadingScreen } from '@/components/layout/LoadingScreen';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
     'Ganesh Brand Toor Dal',
     'Nilkanth Brand Toor Dal',
     'Natural Brand Unpolished Toor',
-    'Gondal Pulse Trading',
+    'Junagadh Pulse Trading',
     'Pulses Import Export India',
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
@@ -122,7 +121,6 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
-          <CartDrawer />
           <FloatingActions />
         </SmoothScroll>
       </body>

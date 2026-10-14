@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: 'About Us | Heritage & Sortex Pulse Milling',
   description:
-    'Learn about Kanani Industries — our 28-year journey from the Gondal APMC grain market to becoming a leading Sortex toor dal processor and global exporter.',
+    'Learn about Kanani Industries — our 28-year journey from the Junagadh APMC grain market to becoming a leading Sortex toor dal processor and global exporter.',
 };
 
 const values = [
@@ -46,9 +46,9 @@ const values = [
 const milestones = [
   {
     year: '1998',
-    title: 'Foundation in Gondal Mandi',
+    title: 'Foundation in Junagadh Mandi',
     description:
-      'Started as a dedicated raw pulse trading company in the agricultural market yard of Gondal, Gujarat.',
+      'Started as a dedicated raw pulse trading company in the agricultural market yard of Junagadh, Gujarat.',
   },
   {
     year: '2006',
@@ -100,7 +100,7 @@ export default function AboutPage() {
 
           <div className="max-w-3xl space-y-4 relative z-10">
             <span className="inline-block px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-accent border border-white/20">
-              Our Heritage &bull; Gondal, Gujarat
+              Our Heritage &bull; Junagadh, Gujarat
             </span>
             <h1 className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-white">
               Rooted in Saurashtra Soil,{' '}

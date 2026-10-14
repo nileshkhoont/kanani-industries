@@ -81,7 +81,7 @@ export function ContactForm() {
             Message Successfully Dispatched
           </h4>
           <p className="text-sm text-ink-muted max-w-md mx-auto leading-relaxed">
-            Thank you for connecting with Kanani Industries. Our customer care desk in Gondal will
+            Thank you for connecting with Kanani Industries. Our customer care desk in Junagadh will
             review your message and get in touch with you shortly.
           </p>
 
@@ -144,7 +144,7 @@ export function ContactForm() {
                 type="tel"
                 name="phone"
                 required
-                placeholder="+91 98765 43210"
+                placeholder="+91 80000 04462"
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 rounded-xl border border-border bg-surface text-ink text-sm focus:outline-none focus:ring-2 focus:ring-primary"

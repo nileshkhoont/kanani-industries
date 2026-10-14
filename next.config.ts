@@ -40,6 +40,30 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/export",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/recipes",
+        destination: "/products",
+        permanent: true,
+      },
+      {
+        source: "/cart",
+        destination: "/products",
+        permanent: true,
+      },
+      {
+        source: "/checkout",
+        destination: "/products",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -20,7 +20,7 @@ const stages = [
     subtitle: 'Direct sourcing of sun-cured pigeon pea pods',
     image: '/images/process/step-1-sourcing.jpg',
     description:
-      'We handpick prime harvest batches from agrarian mandis across Gondal, Rajkot, and Junagadh. Raw grains are tested for natural moisture (below 12%) and protein density before entering our mill premises.',
+      'We handpick prime harvest batches from agrarian mandis across Junagadh, Rajkot, and Saurashtra. Raw grains are tested for natural moisture (below 12%) and protein density before entering our mill premises.',
     specs: ['Direct Farmer Mandi Trade', 'Moisture Controlled (<12%)', 'High Natural Protein'],
   },
   {

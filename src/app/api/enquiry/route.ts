@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
 
       // Build WhatsApp message text fallback
       const waText = encodeURIComponent(
-        `*New Bulk Export Enquiry - Kanani Industries*\n\n` +
+        `*New Bulk Trade Enquiry - Kanani Industries*\n\n` +
           `Company: ${enquiry.companyName}\n` +
           `Contact: ${enquiry.contactPerson}\n` +
           `Country: ${enquiry.country}\n` +

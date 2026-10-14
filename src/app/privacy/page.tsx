@@ -41,7 +41,7 @@ export default function PrivacyPage() {
         <section className="space-y-2">
           <h2 className="font-heading font-bold text-lg text-primary-dark">3. Cookies &amp; Storage</h2>
           <p>
-            We use browser localStorage strictly for retaining your shopping cart contents and session flags
+            We use browser storage strictly for essential user preferences and session flags
             (such as announcement bar dismissals). No invasive third-party tracking pixels or telemetry tools
             are employed on this platform.
           </p>
@@ -50,10 +50,11 @@ export default function PrivacyPage() {
         <section className="space-y-2">
           <h2 className="font-heading font-bold text-lg text-primary-dark">4. Contacting Us</h2>
           <p>
-            If you have questions regarding your personal information, please email our data protection officer at{' '}
-            <a href={`mailto:${siteConfig.contact.email}`} className="text-primary font-bold hover:underline">
-              {siteConfig.contact.email}
-            </a>.
+            If you have questions regarding your personal information, please call us at{' '}
+            <a href={`tel:${siteConfig.contact.phone}`} className="text-primary font-bold hover:underline">
+              {siteConfig.contact.displayPhone}
+            </a>{' '}
+            or write to our registered facility at {siteConfig.contact.address.full}.
           </p>
         </section>
       </div>

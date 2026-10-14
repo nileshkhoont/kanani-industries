@@ -23,7 +23,7 @@ const pillars = [
     icon: RefreshCw,
     title: 'Dependable High Volume Supply',
     description:
-      'With automated high-throughput Sortex lines operating year-round in Gondal, we fulfill retail chains, institutional caterers, and export container orders without seasonal delays.',
+      'With automated high-throughput Sortex lines operating year-round in Junagadh, we fulfill retail chains, institutional caterers, and export container orders without seasonal delays.',
   },
 ];
 

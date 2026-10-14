@@ -43,21 +43,6 @@ export const ContactFormSchema = z.object({
   honeypot: z.string().max(0, 'Spam detected').optional().default(''),
 });
 
-export const CheckoutFormSchema = z.object({
-  fullName: z.string().trim().min(2, 'Full name is required'),
-  phone: z
-    .string()
-    .trim()
-    .regex(/^[0-9+\s-]{10,15}$/, 'Please enter a valid phone number (10-15 digits)'),
-  address: z.string().trim().min(10, 'Delivery address is required (at least 10 characters)'),
-  city: z.string().trim().min(2, 'City is required'),
-  state: z.string().trim().min(2, 'State is required'),
-  pincode: z
-    .string()
-    .trim()
-    .regex(/^[0-9]{6}$/, 'Please enter a valid 6-digit Indian PIN code'),
-  notes: z.string().trim().optional(),
-});
 
 export const ExportEnquirySchema = z.object({
   companyName: z.string().trim().min(2, 'Company name is required'),

@@ -24,7 +24,7 @@ export default function ShippingPolicyPage() {
         <section className="space-y-2">
           <h2 className="font-heading font-bold text-lg text-primary-dark">1. Domestic Dispatch (Within India)</h2>
           <p>
-            Retail and regional store orders are dispatched from our central facility in Gondal, Gujarat
+            Retail and regional store orders are dispatched from our central facility in Junagadh, Gujarat
             within 24–48 hours of order confirmation. Delivery timelines vary from 2 to 4 business days
             within Gujarat, and 4 to 7 business days for pan-India delivery destinations.
           </p>

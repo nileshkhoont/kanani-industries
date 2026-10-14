@@ -24,7 +24,7 @@ export default function TermsPage() {
           <h2 className="font-heading font-bold text-lg text-primary-dark">1. Overview</h2>
           <p>
             Welcome to the official website of {siteConfig.legalName} (&quot;Company&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;).
-            By accessing our website, browsing our product listings, or placing domestic/export orders,
+            By accessing our website, browsing our product listings, or placing wholesale or retail orders,
             you agree to be bound by the following terms and conditions.
           </p>
         </section>
@@ -43,7 +43,7 @@ export default function TermsPage() {
           <h2 className="font-heading font-bold text-lg text-primary-dark">3. Orders &amp; Communication</h2>
           <p>
             Orders initiated via our website are processed directly through WhatsApp communication or official purchase orders.
-            An order is considered confirmed only upon issuance of an invoice or proforma from our sales desk in Gondal, Gujarat.
+            An order is considered confirmed only upon issuance of an invoice or proforma from our sales desk in Junagadh, Gujarat.
           </p>
         </section>
 
@@ -59,7 +59,7 @@ export default function TermsPage() {
           <h2 className="font-heading font-bold text-lg text-primary-dark">5. Jurisdiction</h2>
           <p>
             Any disputes arising out of domestic or international transactions shall be subject to the exclusive jurisdiction
-            of the courts in Gondal / Rajkot, Gujarat, India.
+            of the courts in Junagadh, Gujarat, India.
           </p>
         </section>
       </div>
