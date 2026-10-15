@@ -248,7 +248,7 @@ export function AdminDashboard({
         <div className="p-6 border-b border-border bg-surface-alt/50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-heading font-black text-xl text-primary-dark">
-              Toor Dal Selling Rates (Per 1 kg)
+              Toor Selling Rates (Per 1 kg)
             </h2>
             <p className="text-xs text-ink-muted mt-0.5">
               Updates are written atomically to disk and immediately invalidate website caches.

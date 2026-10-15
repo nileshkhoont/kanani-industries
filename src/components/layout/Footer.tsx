@@ -1,13 +1,8 @@
 import Link from 'next/link';
 import { Logo } from '@/components/ui/Logo';
+import { GaneshTradingLogo } from '@/components/ui/GaneshTradingLogo';
 import { siteConfig } from '@/config/site';
-import {
-  MapPin,
-  Phone,
-  ArrowRight,
-  ShieldCheck,
-  CheckCircle2,
-} from 'lucide-react';
+import { MapPin, Phone, ArrowRight } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,35 +15,25 @@ export function Footer() {
 
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
-          {/* Brand Bio Column (takes 2 cols on lg) */}
-          <div className="lg:col-span-2 space-y-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-12">
+          {/* Brand Bio Column */}
+          <div className="md:col-span-12 lg:col-span-6 space-y-4">
             <Logo variant="dark-surface" size="md" />
 
-            <p className="text-white/80 text-sm leading-relaxed max-w-md pt-2">
-              Kanani Industries is a premier Gujarat-based pulse processing and Sortex toor dal
-              trading company. We deliver uncompromised color-sorted purity, natural nutritional
-              richness, and dependable bulk volume across India and worldwide markets.
+            <p className="text-white/80 text-sm leading-relaxed max-w-xl pt-1">
+              Kanani Industries is a premier Gujarat-based pulse processor and Sortex toor trader,
+              delivering uncompromised color-sorted purity and dependable bulk volume worldwide.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-xs font-semibold text-accent tracking-wider uppercase border border-white/15">
-              <span>{siteConfig.tagline}</span>
-            </div>
-
-            <div className="pt-2 flex items-center gap-4 text-xs text-white/70">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-secondary-light" />
-                100% Sortex Sorted
-              </span>
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-secondary-light" />
-                Zero Adulteration
-              </span>
+            <div className="pt-2">
+              <div className="inline-flex items-center gap-3 px-3.5 py-2 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-sm transition-colors">
+                <GaneshTradingLogo size="sm" variant="dark-surface" showSisterTag={true} />
+              </div>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="md:col-span-6 lg:col-span-3 space-y-4">
             <h4 className="font-heading text-sm font-bold tracking-wider uppercase text-white/95 border-b border-white/10 pb-2">
               Explore
             </h4>
@@ -68,7 +53,7 @@ export function Footer() {
               <li>
                 <Link href="/products" className="hover:text-accent transition-colors flex items-center gap-1.5">
                   <ArrowRight className="w-3 h-3 text-secondary-light" />
-                  All Brands &amp; Dals
+                  All Brands &amp; Products
                 </Link>
               </li>
               <li>
@@ -86,41 +71,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Our Brands */}
-          <div className="space-y-4">
-            <h4 className="font-heading text-sm font-bold tracking-wider uppercase text-white/95 border-b border-white/10 pb-2">
-              Our Brands
-            </h4>
-            <ul className="space-y-2.5 text-sm text-white/75">
-              <li>
-                <Link href="/products/janap-toor-savaj-brand" className="hover:text-accent transition-colors block">
-                  <span className="font-medium text-white">Savaj Brand</span>
-                  <span className="block text-xs text-white/60">Janap Toor (Bestseller)</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/varjin-toor-ganesh-brand" className="hover:text-accent transition-colors block">
-                  <span className="font-medium text-white">Ganesh Brand</span>
-                  <span className="block text-xs text-white/60">Varjin Toor (Heritage)</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/bidian-toor-nilkanth-brand" className="hover:text-accent transition-colors block">
-                  <span className="font-medium text-white">Nilkanth Brand</span>
-                  <span className="block text-xs text-white/60">Bidian Toor (Bold Plump)</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/rasdi-toor-natural-brand" className="hover:text-accent transition-colors block">
-                  <span className="font-medium text-white">Natural Brand</span>
-                  <span className="block text-xs text-white/60">Rasdi Toor (100% Unpolished)</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact Details */}
-          <div className="space-y-4">
+          <div className="md:col-span-6 lg:col-span-3 space-y-4">
             <h4 className="font-heading text-sm font-bold tracking-wider uppercase text-white/95 border-b border-white/10 pb-2">
               Corporate Desk
             </h4>
@@ -155,7 +107,7 @@ export function Footer() {
 
         {/* Bottom Bar: Copyright & Legal Policies */}
         <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/65">
-          <p>© {currentYear} {siteConfig.legalName}. All rights reserved.</p>
+          <p>© {currentYear} {siteConfig.legalName} &amp; {siteConfig.sisterCompany}. All rights reserved.</p>
 
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <Link href="/terms" className="hover:text-white transition-colors">

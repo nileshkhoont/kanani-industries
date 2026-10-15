@@ -8,7 +8,7 @@ interface GoldenDalAtmosphereProps {
   showRays?: boolean;
 }
 
-interface DalGrain {
+interface ToorAtmosphereGrain {
   x: number;
   y: number;
   rx: number; // horizontal radius
@@ -81,20 +81,20 @@ export function GoldenDalAtmosphere({
     window.addEventListener('mousemove', onMouseMove);
     window.addEventListener('mouseleave', onMouseLeave);
 
-    // Color palettes for authentic golden split Toor Dal
-    const dalPalette = [
+    // Color palettes for authentic golden Toor
+    const toorPalette = [
       { prime: '#FBBF24', shadow: '#D97706' }, // Amber 400 / 600
       { prime: '#FDE047', shadow: '#CA8A04' }, // Yellow 300 / 600
       { prime: '#F59E0B', shadow: '#B45309' }, // Amber 500 / 700
-      { prime: '#FEF08A', shadow: '#EAB308' }, // Bright Split Face
+      { prime: '#FEF08A', shadow: '#EAB308' }, // Bright Surface
     ];
 
     const count = density === 'hero' ? 45 : density === 'compact' ? 24 : 32;
-    const grains: DalGrain[] = [];
+    const grains: ToorAtmosphereGrain[] = [];
 
     for (let i = 0; i < count; i++) {
       const tier: 0 | 1 | 2 = i % 5 === 0 ? 2 : i % 2 === 0 ? 1 : 0;
-      const palette = dalPalette[Math.floor(Math.random() * dalPalette.length)];
+      const palette = toorPalette[Math.floor(Math.random() * toorPalette.length)];
 
       const rx =
         tier === 2
@@ -102,7 +102,7 @@ export function GoldenDalAtmosphere({
           : tier === 1
           ? 5.5 + Math.random() * 3.5
           : 2 + Math.random() * 2;
-      const ry = rx * (0.75 + Math.random() * 0.15); // natural split lentil ratio
+      const ry = rx * (0.75 + Math.random() * 0.15); // natural toor ratio
 
       const baseOpacity =
         tier === 2
@@ -133,19 +133,19 @@ export function GoldenDalAtmosphere({
 
     let time = 0;
 
-    const drawGrain = (g: DalGrain) => {
+    const drawGrain = (g: ToorAtmosphereGrain) => {
       ctx.save();
       ctx.translate(g.x, g.y);
       ctx.rotate(g.angle);
       ctx.globalAlpha = g.opacity;
 
-      // Tier 2: Large prominent split dal with glow & 3D grain texture
+      // Tier 2: Large prominent toor grain with glow & 3D grain texture
       if (g.tier === 2) {
         ctx.shadowColor = 'rgba(245, 158, 11, 0.4)';
         ctx.shadowBlur = 10;
       }
 
-      // 1. Draw outer lentil shell
+      // 1. Draw outer pulse shell
       ctx.beginPath();
       ctx.ellipse(0, 0, g.rx, g.ry, 0, 0, Math.PI * 2);
 
@@ -165,7 +165,7 @@ export function GoldenDalAtmosphere({
       ctx.fillStyle = grad;
       ctx.fill();
 
-      // 2. If mid/large grain, draw distinctive split seam line of Toor Dal
+      // 2. If mid/large grain, draw distinctive highlight curve of Toor
       if (g.tier >= 1) {
         ctx.beginPath();
         ctx.arc(0, 0, g.rx * 0.6, 0.2, Math.PI * 0.85);
@@ -285,7 +285,7 @@ export function GoldenDalAtmosphere({
         </div>
       )}
 
-      {/* 3. HTML5 Canvas rendering realistic 3D floating Split Toor Dal grains */}
+      {/* 3. HTML5 Canvas rendering realistic 3D floating Toor grains */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
     </div>
   );

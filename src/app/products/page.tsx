@@ -7,9 +7,9 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: 'Our Sortex Toor Dal Brands | Buy Online & Bulk Orders',
+  title: 'Our Sortex Toor Brands | Buy Online & Bulk Orders',
   description:
-    'Browse Kanani Industries 4 signature Sortex Toor Dal brands: Savaj Brand Janap Toor, Ganesh Brand Varjin Toor, Nilkanth Brand Bidian Toor, and Natural Brand Rasdi Toor.',
+    'Browse Kanani Industries 4 signature Sortex Toor brands: Savaj Brand Janap Toor, Ganesh Brand Varjin Toor, Nilkanth Brand Bidian Toor, and Natural Brand Rasdi Toor.',
 };
 
 export default async function ProductsPage() {
@@ -25,7 +25,7 @@ export default async function ProductsPage() {
             Direct Mill Catalog
           </span>
           <h1 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-primary-dark tracking-tight mt-1">
-            Sortex Toor Dal Collection
+            Sortex Toor Collection
           </h1>
           <p className="text-sm sm:text-base text-ink-muted mt-2 max-w-2xl">
             Cleaned with computerized multi-CCD color sorting technology, free from chemical polish,

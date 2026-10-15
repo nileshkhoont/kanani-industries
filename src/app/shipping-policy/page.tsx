@@ -4,7 +4,7 @@ import { formatPrice } from '@/lib/format';
 
 export const metadata: Metadata = {
   title: 'Shipping & Delivery Policy',
-  description: 'Shipping, dispatch timelines, and freight policies for Kanani Industries toor dal orders.',
+  description: 'Shipping, dispatch timelines, and freight policies for Kanani Industries toor orders.',
 };
 
 export default function ShippingPolicyPage() {

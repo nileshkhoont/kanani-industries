@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { MessageCircle, ArrowRight } from 'lucide-react';
 import type { Product } from '@/lib/products';
 import { formatPrice, calculateDiscount } from '@/lib/format';
 import { siteConfig } from '@/config/site';
@@ -48,10 +48,10 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* Card Body */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
         <div>
-          <span className="text-[11px] font-bold uppercase tracking-wider text-secondary">
+          <span className="text-sm font-extrabold uppercase tracking-wider text-secondary block">
             {product.brand}
           </span>
-          <Link href={`/products/${product.slug}`} className="block mt-0.5">
+          <Link href={`/products/${product.slug}`} className="block mt-1">
             <h3 className="font-heading font-extrabold text-xl text-primary-dark hover:text-secondary transition-colors">
               {product.name}
             </h3>
@@ -61,45 +61,40 @@ export function ProductCard({ product }: ProductCardProps) {
           </p>
         </div>
 
-        {/* Highlighted Price Block */}
+        {/* Price Block */}
         <div className="pt-2 border-t border-border-subtle flex items-center justify-between gap-2">
           <div className="flex flex-col">
             <span className="text-[10px] text-ink-muted uppercase font-bold tracking-wider">
               Selling Rate
             </span>
             <div className="flex items-baseline gap-2 mt-0.5">
-              {/* Highlighted Golden Price Pill */}
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent text-primary-dark font-heading font-black text-base shadow-sm">
-                <span>{formatPrice(product.price)}</span>
-                <span className="text-xs font-bold text-primary-dark/80 ml-1">/ kg</span>
-              </div>
+              <span className="font-heading font-black text-xl text-primary-dark tracking-tight">
+                {formatPrice(product.price)}
+                <span className="text-xs font-bold text-ink-muted ml-1">/ kg</span>
+              </span>
               <span className="line-through text-xs font-semibold text-ink-muted">
                 {formatPrice(product.mrp)}
               </span>
             </div>
           </div>
-
-          <span className="text-[11px] font-bold text-secondary-dark uppercase bg-secondary-light/15 px-2 py-0.5 rounded-md">
-            Direct Mill
-          </span>
         </div>
 
-        {/* Direct Action Buttons: WhatsApp Enquiry + View Details */}
+        {/* Action Buttons: WhatsApp Enquiry + View Details */}
         <div className="grid grid-cols-2 gap-2 pt-1">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Enquire about ${product.name} on WhatsApp`}
-            className="py-2.5 px-3 rounded-2xl bg-secondary hover:bg-secondary-dark text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 shadow-navy-xs transition-all active:scale-98"
+            className="py-2.5 px-3 rounded-2xl border border-secondary text-secondary hover:bg-secondary hover:text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 transition-all duration-200 active:scale-98"
           >
-            <MessageCircle className="w-4 h-4 fill-current shrink-0" />
+            <MessageCircle className="w-4 h-4 shrink-0" />
             <span className="truncate">WhatsApp</span>
           </a>
 
           <Link
             href={`/products/${product.slug}`}
-            className="py-2.5 px-3 rounded-2xl bg-primary hover:bg-primary-light text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 shadow-navy-xs transition-all active:scale-98"
+            className="py-2.5 px-3 rounded-2xl border border-primary text-primary hover:bg-primary hover:text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 transition-all duration-200 active:scale-98"
           >
             <span>Details</span>
             <ArrowRight className="w-3.5 h-3.5 shrink-0" />

@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: 'Sortex Quality & 7-Stage Processing | Zero Chemical Polishing',
   description:
-    'Discover how Kanani Industries transforms raw Saurashtra pigeon peas into pristine 99.8% pure Toor Dal using computerized Sortex optical color sorters.',
+    'Discover how Kanani Industries transforms raw Saurashtra pigeon peas into pristine 99.8% pure Toor using computerized Sortex optical color sorters.',
 };
 
 const stages = [
@@ -48,7 +48,7 @@ const stages = [
     subtitle: 'Segregating bold kernels from small seeds',
     image: '/images/process/step-4-milling.jpg',
     description:
-      'Color-sorted grains are passed through rotary drum sieves to classify them by split diameter. This guarantees that your bag contains consistent, evenly sized dal that cooks uniformly in the pot.',
+      'Color-sorted grains are passed through rotary drum sieves to classify them by split diameter. This guarantees that your bag contains consistent, evenly sized toor that cooks uniformly.',
     specs: ['Rotary Cylinder Calibration', 'Even Boiling Assured', 'Separation of Broken Pieces'],
   },
   {
@@ -63,7 +63,7 @@ const stages = [
   {
     stage: '06',
     title: '100% Natural Finishing (No Mineral Oil Polish)',
-    subtitle: 'Pure dal, free from artificial glazes',
+    subtitle: 'Pure toor, free from artificial glazes',
     image: '/images/process/step-1-sourcing.jpg',
     description:
       'Unlike commercial producers who apply synthetic paraffin or mineral oil for artificial shine, Kanani Industries relies purely on dry buffing and natural conditioning. The grain keeps its natural golden luster, authentic sweet taste, and high dietary fiber.',
@@ -75,7 +75,7 @@ const stages = [
     subtitle: 'Freshness locked until kitchen preparation',
     image: '/images/process/step-5-packaging.jpg',
     description:
-      'Automated form-fill-seal machines pack the finished Sortex toor dal into laminated food-grade retail pouches (1kg, 5kg) and heavy-gauge woven polypropylene/jute bags (25kg, 30kg, 50kg) for domestic and global export dispatch.',
+      'Automated form-fill-seal machines pack the finished Sortex toor into laminated food-grade retail pouches (1kg, 5kg) and heavy-gauge woven polypropylene/jute bags (25kg, 30kg, 50kg) for domestic and global export dispatch.',
     specs: ['Heavy-Gauge 50kg Export Bags', 'Food-Grade 1kg/5kg Pouches', 'Tamper-Evident Stitching'],
   },
 ];
@@ -96,7 +96,7 @@ export default function QualityPage() {
             <p className="text-base sm:text-lg text-white/85 leading-relaxed">
               What is Sortex sorting? It is computerized optical color sorting that inspects every
               single grain with micro-cameras, blowing away discolored, black-spotted, or foreign seeds.
-              Here is how we deliver 99.8% spotless golden Toor Dal across 7 rigorous stages.
+              Here is how we deliver 99.8% spotless golden Toor across 7 rigorous stages.
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-interface DalGrain {
+interface ToorGrain {
   x: number;
   y: number;
   size: number;
@@ -12,7 +12,7 @@ interface DalGrain {
   rotationSpeed: number;
   opacity: number;
   pulsePhase: number;
-  aspectRatio: number; // toor dal split grain is slightly oval (length vs width)
+  aspectRatio: number; // toor whole grain is slightly oval
   shade: string;
   depth: number; // 0 = far (small/blurred), 1 = mid, 2 = near
 }
@@ -53,8 +53,8 @@ export function ToorDalParticles() {
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseleave', handleMouseLeave);
 
-    // Curated natural golden Toor Dal hues
-    const dalColors = [
+    // Curated natural golden Toor hues
+    const toorColors = [
       '#FBBF24', // Amber 400 - Radiant golden yellow
       '#F59E0B', // Amber 500 - Deep golden pulse
       '#FCD34D', // Amber 300 - Sun-cured yellow
@@ -64,7 +64,7 @@ export function ToorDalParticles() {
 
     // Number of grains scaled to screen size (approx 35-50 grains)
     const grainCount = Math.min(50, Math.max(25, Math.floor(width / 35)));
-    const grains: DalGrain[] = [];
+    const grains: ToorGrain[] = [];
 
     for (let i = 0; i < grainCount; i++) {
       const depth = Math.random() < 0.25 ? 2 : Math.random() < 0.65 ? 1 : 0;
@@ -78,8 +78,8 @@ export function ToorDalParticles() {
         rotationSpeed: (Math.random() - 0.5) * 0.015,
         opacity: depth === 2 ? 0.45 + Math.random() * 0.35 : depth === 1 ? 0.3 + Math.random() * 0.25 : 0.15 + Math.random() * 0.15,
         pulsePhase: Math.random() * Math.PI * 2,
-        aspectRatio: 1.25 + Math.random() * 0.2, // characteristic oval lentil proportion
-        shade: dalColors[Math.floor(Math.random() * dalColors.length)],
+        aspectRatio: 1.25 + Math.random() * 0.2, // characteristic oval toor proportion
+        shade: toorColors[Math.floor(Math.random() * toorColors.length)],
         depth,
       });
     }
@@ -115,7 +115,7 @@ export function ToorDalParticles() {
         if (grain.x < -30) grain.x = width + 20;
         if (grain.x > width + 30) grain.x = -20;
 
-        // Draw individual Split Toor Dal Grain
+        // Draw individual Toor Grain
         ctx.save();
         ctx.translate(grain.x, grain.y);
         ctx.rotate(grain.angle);
@@ -128,23 +128,23 @@ export function ToorDalParticles() {
 
         ctx.globalAlpha = grain.opacity;
 
-        // Draw Lentil / Split Toor Dal Shape (rounded split oval)
+        // Draw Toor Grain Shape (rounded oval)
         const rx = grain.size;
         const ry = grain.size / grain.aspectRatio;
 
         ctx.beginPath();
         ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
 
-        // Radial gradient to give authentic 3D split pulse convex appearance
+        // Radial gradient to give authentic 3D pulse convex appearance
         const grad = ctx.createRadialGradient(-rx * 0.25, -ry * 0.25, rx * 0.1, 0, 0, rx * 1.2);
-        grad.addColorStop(0, '#FEF08A'); // bright sunlit inner split surface
+        grad.addColorStop(0, '#FEF08A'); // bright sunlit inner surface
         grad.addColorStop(0.45, grain.shade);
         grad.addColorStop(1, '#B45309'); // warm rich natural edge
 
         ctx.fillStyle = grad;
         ctx.fill();
 
-        // Subtle split seam line characteristic of Toor Dal
+        // Subtle highlight line characteristic of Toor
         ctx.beginPath();
         ctx.ellipse(-rx * 0.15, 0, rx * 0.6, ry * 0.4, 0, 0, Math.PI * 0.8);
         ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';

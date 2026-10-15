@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: 'About Us | Heritage & Sortex Pulse Milling',
   description:
-    'Learn about Kanani Industries — our 28-year journey from the Junagadh APMC grain market to becoming a leading Sortex toor dal processor and global exporter.',
+    'Learn about Kanani Industries — our 28-year journey from the Junagadh APMC grain market to becoming a leading Sortex toor processor and global exporter.',
 };
 
 const values = [
@@ -108,7 +108,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-base sm:text-lg text-white/90 leading-relaxed font-normal">
               For over 28 years, Kanani Industries has honored Gujarat’s rich agrarian traditions by
-              delivering pristine, Sortex-cleaned Toor Dal (Pigeon Peas) under our own established
+              delivering pristine, Sortex-cleaned Toor (Pigeon Peas) under our own established
               brands: Savaj, Ganesh, Nilkanth, and Natural.
             </p>
           </div>
@@ -157,8 +157,8 @@ export default function AboutPage() {
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-navy-md">
               <Image
-                src="/images/about/about-heritage.jpg"
-                alt="Gujarat Pigeon Pea Harvest"
+                src="/images/about/toor-crop-farm.jpg"
+                alt="Saurashtra Gujarat Toor Pulse Farm Harvest"
                 fill
                 className="object-cover"
               />
@@ -188,7 +188,7 @@ export default function AboutPage() {
                 Our Mission
               </h3>
               <p className="text-sm text-ink-muted leading-relaxed">
-                To process and supply nutritious, unadulterated Sortex toor dal that respects culinary
+                To process and supply nutritious, unadulterated Sortex toor that respects culinary
                 heritage and health. We strive to be the most trusted pulse partner for families,
                 wholesalers, and international importers by pairing Gujarat’s agricultural richness
                 with high-precision color sorting.

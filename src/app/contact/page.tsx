@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
-    'Hello Kanani Industries, I have an inquiry regarding your Sortex toor dal brands.'
+    'Hello Kanani Industries, I have an inquiry regarding your Sortex toor brands.'
   )}`;
 
   return (

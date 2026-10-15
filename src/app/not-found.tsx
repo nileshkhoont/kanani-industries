@@ -19,7 +19,7 @@ export default function NotFound() {
           </h1>
           <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
             The page you are looking for may have been moved or does not exist. Explore our Sortex Toor
-            dal brands or return to the homepage.
+            brands or return to the homepage.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row gap-3">
@@ -36,7 +36,7 @@ export default function NotFound() {
               className="flex-1 py-3 px-4 rounded-xl bg-surface-alt hover:bg-surface text-primary-dark font-heading font-bold text-xs border border-border flex items-center justify-center gap-2 transition-colors"
             >
               <Package className="w-4 h-4 text-secondary" />
-              <span>Browse Dals</span>
+              <span>Browse Products</span>
             </Link>
           </div>
         </div>

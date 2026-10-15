@@ -95,6 +95,23 @@
   box-shadow: var(--shadow-gold-pill);
 }
 
+/* Continuous infinite right-to-left marquee */
+@keyframes trustMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-trust-marquee {
+  display: flex;
+  width: max-content;
+  animation: trustMarquee 30s linear infinite;
+  will-change: transform;
+}
+
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

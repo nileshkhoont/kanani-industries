@@ -20,7 +20,7 @@ export function FloatingActions() {
   };
 
   const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
-    'Hello Kanani Industries, I would like to inquire about your Sortex Toor Dal products.'
+    'Hello Kanani Industries, I would like to inquire about your Sortex Toor products.'
   )}`;
 
   return (

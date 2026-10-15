@@ -32,7 +32,7 @@ export default function TermsPage() {
         <section className="space-y-2">
           <h2 className="font-heading font-bold text-lg text-primary-dark">2. Products &amp; Pricing</h2>
           <p>
-            All products listed on this website represent agricultural pulses (Sortex Toor Dal / Split Pigeon Peas)
+            All products listed on this website represent agricultural pulses (Sortex Toor / Pigeon Peas)
             processed and packaged under our brands (Savaj, Ganesh, Nilkanth, and Natural).
             Prices are quoted in Indian Rupees (INR) per kilogram and include applicable agricultural mandi cess and statutory taxes.
             Bulk wholesale and export prices are subject to prevailing APMC market fluctuations and contract agreements.

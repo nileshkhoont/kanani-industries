@@ -79,11 +79,11 @@ export function StatsSection() {
 
       {/* Left Side: Dry Toor Animation Video */}
       <div
-        className="hidden lg:block absolute -left-12 xl:left-0 bottom-0 w-[380px] xl:w-[450px] pointer-events-none z-0 select-none"
+        className="hidden md:block absolute left-0 bottom-0 w-[220px] md:w-[250px] lg:w-[270px] xl:w-[320px] 2xl:w-[380px] pointer-events-none z-0 select-none"
         aria-hidden="true"
         style={{
-          maskImage: 'radial-gradient(ellipse at 50% 55%, black 48%, transparent 75%)',
-          WebkitMaskImage: 'radial-gradient(ellipse at 50% 55%, black 48%, transparent 75%)',
+          maskImage: 'radial-gradient(ellipse at 50% 55%, black 50%, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at 50% 55%, black 50%, transparent 75%)',
         }}
       >
         <video
@@ -98,11 +98,11 @@ export function StatsSection() {
 
       {/* Right Side: Dry Toor Animation Video (Mirrored for balance) */}
       <div
-        className="hidden lg:block absolute -right-12 xl:right-0 bottom-0 w-[380px] xl:w-[450px] pointer-events-none z-0 select-none transform scale-x-[-1]"
+        className="hidden md:block absolute right-0 bottom-0 w-[220px] md:w-[250px] lg:w-[270px] xl:w-[320px] 2xl:w-[380px] pointer-events-none z-0 select-none transform scale-x-[-1]"
         aria-hidden="true"
         style={{
-          maskImage: 'radial-gradient(ellipse at 50% 55%, black 48%, transparent 75%)',
-          WebkitMaskImage: 'radial-gradient(ellipse at 50% 55%, black 48%, transparent 75%)',
+          maskImage: 'radial-gradient(ellipse at 50% 55%, black 50%, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at 50% 55%, black 50%, transparent 75%)',
         }}
       >
         <video
@@ -115,37 +115,37 @@ export function StatsSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-secondary">
+      <div className="relative z-10 max-w-[620px] sm:max-w-[680px] lg:max-w-[700px] xl:max-w-[760px] 2xl:max-w-[820px] mx-auto px-4 sm:px-6">
+        <div className="text-center max-w-lg mx-auto mb-8 sm:mb-10 space-y-1">
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-secondary block">
             Scale &amp; Proven Reputation
           </span>
-          <h2 className="font-heading font-black text-3xl sm:text-4xl text-primary-dark tracking-tight">
+          <h2 className="font-heading font-black text-2xl sm:text-3xl text-primary-dark tracking-tight">
             Numbers That Reflect Decades of Trust
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 xl:gap-4">
           {stats.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-white/85 border border-slate-200/80 shadow-md backdrop-blur-sm text-center flex flex-col items-center justify-between space-y-3 hover:bg-white hover:shadow-xl transition-all"
+                className="p-3 sm:p-3.5 xl:p-4 rounded-2xl bg-white/95 border border-slate-200/90 shadow-sm backdrop-blur-md text-center flex flex-col items-center justify-between space-y-1.5 hover:bg-white hover:shadow-md transition-all"
               >
-                <div className="w-12 h-12 rounded-2xl bg-secondary/15 flex items-center justify-center text-secondary">
-                  <Icon className="w-6 h-6" />
+                <div className="w-8 h-8 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+                  <Icon className="w-4 h-4" />
                 </div>
 
                 <div>
-                  <div className="font-heading font-black text-4xl sm:text-5xl text-primary-dark tracking-tight">
+                  <div className="font-heading font-black text-xl sm:text-2xl xl:text-3xl text-primary-dark tracking-tight leading-none">
                     <Counter end={item.value} startAnimation={hasAnimated} />
                     <span className="text-accent">{item.suffix}</span>
                   </div>
-                  <h4 className="font-heading font-bold text-base text-primary-dark mt-1">
+                  <h4 className="font-heading font-bold text-xs sm:text-[13px] text-primary-dark mt-1 leading-tight">
                     {item.label}
                   </h4>
-                  <p className="text-xs text-ink-muted mt-1 leading-relaxed">
+                  <p className="text-[10px] sm:text-[11px] text-ink-muted mt-0.5 leading-snug line-clamp-2">
                     {item.description}
                   </p>
                 </div>

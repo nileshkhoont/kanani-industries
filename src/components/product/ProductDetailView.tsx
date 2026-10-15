@@ -141,7 +141,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-light/15 text-secondary-dark font-heading font-bold text-xs uppercase tracking-wider mb-2">
               <span>{product.brand}</span>
               <span>•</span>
-              <span>Sortex Cleaned Toor Dal</span>
+              <span>Sortex Cleaned Toor</span>
             </div>
 
             <h1 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-primary-dark tracking-tight">
@@ -194,7 +194,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             </div>
             <div className="grid grid-cols-2 p-3">
               <span className="text-ink-muted">Commodity</span>
-              <span className="font-semibold text-primary-dark">Sortex Cleaned Toor Dal</span>
+              <span className="font-semibold text-primary-dark">Sortex Cleaned Toor</span>
             </div>
             <div className="grid grid-cols-2 p-3">
               <span className="text-ink-muted">Purity Grade</span>
@@ -279,7 +279,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
         </a>
       </div>
 
-      {/* Related Products: Other Kanani Dal Brands */}
+      {/* Related Products: Other Kanani Toor Brands */}
       {relatedProducts.length > 0 && (
         <div className="mt-16 pt-12 border-t border-border">
           <div className="flex items-center justify-between mb-8">

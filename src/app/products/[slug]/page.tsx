@@ -30,7 +30,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${product.name} (${product.brand}) - Sortex Toor Dal`;
+  const title = `${product.name} (${product.brand}) - Sortex Toor`;
   const description = `${product.shortDescription} Selling rate ₹${product.price}/kg (MRP ₹${product.mrp}). 100% Sortex cleaned Gujarat pigeon peas.`;
   const imageUrl = product.images[0] ? `${siteConfig.url}${product.images[0]}` : siteConfig.logo.ogImage;
 

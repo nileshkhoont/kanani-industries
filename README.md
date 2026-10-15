@@ -1,7 +1,7 @@
 # Kanani Industries — Official Website & Digital Platform
 
 > **"Sortex Toor Trading | Import & Export"**  
-> Gujarat’s premier Sortex-cleaned Toor Dal (Pigeon Peas) processing and international export trading platform.
+> Gujarat’s premier Sortex-cleaned Toor (Pigeon Peas) processing and international export trading platform.
 
 ---
 
@@ -55,7 +55,7 @@ All colors, shadows, and design tokens are centralized exclusively in [`src/styl
 | **Leaf Green** | `--color-secondary` | `#3E9B2F` | Agrarian identity, badges, checkmarks |
 | **Leaf Green Light** | `--color-secondary-light` | `#7DC22E` | Highlight text, gradient stops |
 | **Leaf Green Dark** | `--color-secondary-dark` | `#2C7522` | Deep green shadow & footer accents |
-| **Golden Grain** | `--color-accent` | `#E8B23A` | Toor dal purity badge, highlight pills |
+| **Golden Grain** | `--color-accent` | `#E8B23A` | Toor purity badge, highlight pills |
 | **Surface** | `--color-surface` | `#F6F9F2` | Subtle organic cream background |
 | **Ink** | `--color-ink` | `#0B1F3F` | High-contrast body typography |
 

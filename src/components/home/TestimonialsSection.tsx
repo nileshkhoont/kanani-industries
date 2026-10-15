@@ -11,7 +11,7 @@ const testimonials = [
     role: 'Wholesale Grain Distributor, APMC Ahmedabad',
     image: '/images/testimonials/avatar-1.jpg',
     quote:
-      'We have traded Kanani Industries Savaj Brand toor dal for over 8 years. Their Sortex consistency is unmatched in Gujarat — virtually zero foreign grain, spotless yellow color, and reliable delivery dispatch during peak harvest seasons.',
+      'We have traded Kanani Industries Savaj Brand toor for over 8 years. Their Sortex consistency is unmatched in Gujarat — virtually zero foreign grain, spotless yellow color, and reliable delivery dispatch during peak harvest seasons.',
     rating: 5,
   },
   {
@@ -38,7 +38,7 @@ const testimonials = [
     role: 'Homemaker & Catering Lead, Rajkot',
     image: '/images/testimonials/avatar-4.jpg',
     quote:
-      'The Natural Brand unpolished toor dal has that real rustic village aroma. You can tell there is no artificial shine or oil coating. My family loves the authentic sweet taste in our daily Gujarati dal.',
+      'The Natural Brand unpolished toor has that real rustic village aroma. You can tell there is no artificial shine or oil coating. My family loves the authentic sweet taste in our daily meals.',
     rating: 5,
   },
 ];

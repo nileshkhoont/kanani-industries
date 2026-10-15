@@ -11,8 +11,8 @@ export function AboutTeaser() {
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-navy-lg border border-border">
               <Image
-                src="/images/about/about-facility.jpg"
-                alt="Kanani Industries Modern Milling Facility"
+                src="/images/about/kanani-toor-packaging-plant.jpg"
+                alt="Kanani Industries Modern Toor Processing and Packaging Unit"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

@@ -5,7 +5,7 @@ const pillars = [
     icon: Sparkles,
     title: 'Zero Artificial Polish',
     description:
-      'Unlike commercially glazed lentils that use mineral oil or excessive water polishing to hide defects, our toor dal retains its natural golden grain coat, aroma, and high dietary fiber.',
+      'Unlike commercially glazed pulses that use mineral oil or excessive water polishing to hide defects, our toor retains its natural golden grain coat, aroma, and high dietary fiber.',
   },
   {
     icon: Shield,

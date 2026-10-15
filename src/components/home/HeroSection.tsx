@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'motion/react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useCallback, useRef } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "motion/react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Slide {
   id: string;
@@ -17,31 +17,31 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    id: 'worldwide-network',
-    bgImage: '/images/hero/world-network-hd.png',
-    alt: 'Kanani Industries Worldwide Export & Distribution Network',
-    headline: 'Kanani Industries',
-    subtextPart1: 'Sourcing Gujarat’s Finest Toor Dal: Your ',
-    highlightWord: 'Trusted',
-    subtextPart2: ' Export Partner.',
+    id: "protein-purity",
+    bgImage: "/images/hero/toor-grains-hero.jpg",
+    alt: "Purity That Powers Nutrition - Authentic Gujarat Whole Toor",
+    headline: "Protein That Powers Nutrition",
+    subtextPart1: "Delivering ",
+    highlightWord: "consistency, quality, and taste",
+    subtextPart2: " in every single grain.",
   },
   {
-    id: 'protein-purity',
-    bgImage: '/images/hero/dry-toor-hero.jpg',
-    alt: 'Purity That Powers Nutrition - Golden Sortex Cleaned Toor Dal',
-    headline: 'Protein That Powers Nutrition',
-    subtextPart1: 'Delivering ',
-    highlightWord: 'consistency, quality, and taste',
-    subtextPart2: ' in every single grain.',
+    id: "worldwide-network",
+    bgImage: "/images/hero/world-network-hd.png",
+    alt: "Kanani Industries Worldwide Export & Distribution Network",
+    headline: "Kanani Industries",
+    subtextPart1: "Sourcing Gujarat’s Finest Toor: Your ",
+    highlightWord: "Trusted",
+    subtextPart2: " Export Partner.",
   },
   {
-    id: 'direct-milling',
-    bgImage: '/images/hero/hero-slide-3.jpg',
-    alt: 'Kanani Industries Modern Junagadh Dal Mill Facility and Bulk Dispatch',
-    headline: 'Direct From Junagadh Mills',
-    subtextPart1: 'Empowering ',
-    highlightWord: 'traders & wholesalers',
-    subtextPart2: ' with 28+ years of dependable Saurashtra supply.',
+    id: "direct-milling",
+    bgImage: "/images/hero/hero-slide-3.jpg",
+    alt: "Kanani Industries Modern Junagadh Mill Facility and Bulk Dispatch",
+    headline: "Direct From Junagadh Mills",
+    subtextPart1: "Empowering ",
+    highlightWord: "traders & wholesalers",
+    subtextPart2: " with 28+ years of dependable Saurashtra supply.",
   },
 ];
 
@@ -102,14 +102,14 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.65, ease: 'easeInOut' }}
+          transition={{ duration: 0.65, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full"
         >
           {/* ========================================================= */}
           {/* FULL MAP ON RIGHT & BACKGROUND LAYER                      */}
           {/* ========================================================= */}
           <div className="absolute inset-0 w-full h-full overflow-hidden bg-[#F6F2EA]">
-            {slide.id === 'worldwide-network' ? (
+            {slide.id === "worldwide-network" ? (
               <div className="absolute inset-0 w-full h-full flex justify-end items-center pointer-events-none">
                 <div className="relative w-full md:w-[68%] lg:w-[62%] xl:w-[58%] h-[82%] sm:h-[88%] md:h-[92%] mr-0 sm:mr-3 md:mr-6 lg:mr-10">
                   <Image
@@ -118,8 +118,10 @@ export function HeroSection() {
                     fill
                     priority
                     sizes="(max-width: 768px) 100vw, 65vw"
-                    className="object-contain object-right blur-[3px] md:blur-none"
+                    className="object-contain object-center md:object-right opacity-20 sm:opacity-35 md:opacity-100 transition-opacity duration-300"
                   />
+                  {/* Soft light veil on mobile to guarantee crystal-clear text contrast */}
+                  <div className="absolute inset-0 bg-[#F6F2EA]/30 md:hidden pointer-events-none" />
                 </div>
               </div>
             ) : (
@@ -137,17 +139,19 @@ export function HeroSection() {
           {/* ========================================================= */}
           {/* CLEAN, ELEGANT TEXT OVERLAY (ON LEFT WITH ZERO OVERLAP)   */}
           {/* ========================================================= */}
-          <div className="relative z-10 max-w-7xl mx-auto h-full flex flex-col justify-center px-8 sm:px-14 lg:px-20 pointer-events-none">
+          <div className="relative z-10 max-w-7xl mx-auto h-full flex flex-col justify-center px-10 sm:px-14 lg:px-20 pointer-events-none">
             <div className="max-w-md sm:max-w-lg lg:max-w-xl text-center md:text-left pointer-events-auto">
               {/* Bold Serif Headline */}
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#2A1B14] tracking-tight leading-[1.15]">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#2A1B14] tracking-tight leading-[1.15] drop-shadow-[0_1px_1px_rgba(246,242,234,0.8)]">
                 {slide.headline}
               </h1>
 
               {/* Subtitle with highlighted terracotta keyword */}
-              <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-[#3A2D24] font-normal leading-relaxed">
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-[#3A2D24] font-medium sm:font-normal leading-relaxed drop-shadow-[0_1px_1px_rgba(246,242,234,0.8)]">
                 {slide.subtextPart1}
-                <span className="text-[#C84C27] font-semibold">{slide.highlightWord}</span>
+                <span className="text-[#C84C27] font-bold">
+                  {slide.highlightWord}
+                </span>
                 {slide.subtextPart2}
               </p>
             </div>
@@ -156,11 +160,11 @@ export function HeroSection() {
       </AnimatePresence>
 
       {/* ============================================================= */}
-      {/* MINIMALIST CHEVRON NAVIGATION ARROWS (< and >)                */}
+      {/* MINIMALIST CHEVRON NAVIGATION ARROWS (< and >) - HIDDEN ON MOBILE */}
       {/* ============================================================= */}
       <button
         onClick={() => paginate(-1)}
-        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center text-[#2A1B14]/70 hover:text-[#2A1B14] hover:bg-white/50 rounded-full transition-all z-20 cursor-pointer"
+        className="hidden sm:flex absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 items-center justify-center text-[#2A1B14]/70 hover:text-[#2A1B14] hover:bg-white/50 rounded-full transition-all z-20 cursor-pointer"
         aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8 stroke-[1.75]" />
@@ -168,7 +172,7 @@ export function HeroSection() {
 
       <button
         onClick={() => paginate(1)}
-        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center text-[#2A1B14]/70 hover:text-[#2A1B14] hover:bg-white/50 rounded-full transition-all z-20 cursor-pointer"
+        className="hidden sm:flex absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 items-center justify-center text-[#2A1B14]/70 hover:text-[#2A1B14] hover:bg-white/50 rounded-full transition-all z-20 cursor-pointer"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 stroke-[1.75]" />
@@ -184,8 +188,8 @@ export function HeroSection() {
             onClick={() => goToSlide(idx)}
             className={`transition-all duration-300 rounded-full cursor-pointer ${
               current === idx
-                ? 'w-7 h-2 bg-[#C84C27]'
-                : 'w-2 h-2 bg-[#D1C5B6] hover:bg-[#A89886]'
+                ? "w-7 h-2 bg-[#C84C27]"
+                : "w-2 h-2 bg-[#D1C5B6] hover:bg-[#A89886]"
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />
