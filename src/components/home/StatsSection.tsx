@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { siteConfig } from '@/config/site';
 import { Award, Users, TrendingUp, Globe2 } from 'lucide-react';
-import { GoldenDalAtmosphere } from '@/components/ui/GoldenDalAtmosphere';
 
 interface StatItem {
   icon: typeof Award;
@@ -66,16 +65,62 @@ export function StatsSection() {
   ];
 
   return (
-    <section ref={containerRef} className="py-16 md:py-24 bg-primary-dark text-white relative overflow-hidden">
-      {/* Unified Golden Toor Dal Atmosphere Animation */}
-      <GoldenDalAtmosphere density="ambient" />
+    <section
+      ref={containerRef}
+      className="py-16 md:py-24 bg-gradient-to-b from-[#e3e6e7] via-[#ebeded] to-[#dfe2e3] text-ink relative overflow-hidden border-y border-slate-200/80"
+    >
+      {/* Ambient Studio Lighting Glow */}
+      <div
+        className="absolute inset-0 pointer-events-none z-0 opacity-80"
+        style={{
+          background: 'radial-gradient(circle at 50% 35%, rgba(255,255,255,0.7) 0%, rgba(225,229,231,0.2) 70%, transparent 100%)',
+        }}
+      />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Left Side: Dry Toor Animation Video */}
+      <div
+        className="hidden lg:block absolute -left-12 xl:left-0 bottom-0 w-[380px] xl:w-[450px] pointer-events-none z-0 select-none"
+        aria-hidden="true"
+        style={{
+          maskImage: 'radial-gradient(ellipse at 50% 55%, black 48%, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at 50% 55%, black 48%, transparent 75%)',
+        }}
+      >
+        <video
+          src="/animation/gemini_generated_video_705406bf.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-auto object-contain mix-blend-multiply opacity-95"
+        />
+      </div>
+
+      {/* Right Side: Dry Toor Animation Video (Mirrored for balance) */}
+      <div
+        className="hidden lg:block absolute -right-12 xl:right-0 bottom-0 w-[380px] xl:w-[450px] pointer-events-none z-0 select-none transform scale-x-[-1]"
+        aria-hidden="true"
+        style={{
+          maskImage: 'radial-gradient(ellipse at 50% 55%, black 48%, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at 50% 55%, black 48%, transparent 75%)',
+        }}
+      >
+        <video
+          src="/animation/gemini_generated_video_705406bf.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-auto object-contain mix-blend-multiply opacity-95"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-accent">
+          <span className="text-xs font-bold uppercase tracking-widest text-secondary">
             Scale &amp; Proven Reputation
           </span>
-          <h2 className="font-heading font-black text-3xl sm:text-4xl text-white tracking-tight">
+          <h2 className="font-heading font-black text-3xl sm:text-4xl text-primary-dark tracking-tight">
             Numbers That Reflect Decades of Trust
           </h2>
         </div>
@@ -86,21 +131,21 @@ export function StatsSection() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm text-center flex flex-col items-center justify-between space-y-3 hover:bg-white/10 transition-colors"
+                className="p-6 rounded-3xl bg-white/85 border border-slate-200/80 shadow-md backdrop-blur-sm text-center flex flex-col items-center justify-between space-y-3 hover:bg-white hover:shadow-xl transition-all"
               >
-                <div className="w-12 h-12 rounded-2xl bg-secondary/20 flex items-center justify-center text-secondary-light">
+                <div className="w-12 h-12 rounded-2xl bg-secondary/15 flex items-center justify-center text-secondary">
                   <Icon className="w-6 h-6" />
                 </div>
 
                 <div>
-                  <div className="font-heading font-black text-4xl sm:text-5xl text-accent tracking-tight">
+                  <div className="font-heading font-black text-4xl sm:text-5xl text-primary-dark tracking-tight">
                     <Counter end={item.value} startAnimation={hasAnimated} />
-                    <span>{item.suffix}</span>
+                    <span className="text-accent">{item.suffix}</span>
                   </div>
-                  <h4 className="font-heading font-bold text-base text-white mt-1">
+                  <h4 className="font-heading font-bold text-base text-primary-dark mt-1">
                     {item.label}
                   </h4>
-                  <p className="text-xs text-white/70 mt-1 leading-relaxed">
+                  <p className="text-xs text-ink-muted mt-1 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
