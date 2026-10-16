@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'motion/react';
-import { Eye, Filter, Sparkles, PackageCheck, ArrowRight } from 'lucide-react';
+import { Eye, Filter, Scale, PackageCheck, ArrowRight } from 'lucide-react';
 
 const steps = [
   {
@@ -22,7 +22,7 @@ const steps = [
   },
   {
     step: '03',
-    icon: Sparkles,
+    icon: Scale,
     title: 'Precision Density Grading & Sizing',
     description:
       'Uniform unblemished whole toor grains are graded by density, weight, and diameter, preserving 100% natural whole seed coat and nutrient-rich germ.',

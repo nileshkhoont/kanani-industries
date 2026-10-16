@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Sparkles } from 'lucide-react';
+import { X, Wheat, ShieldCheck, Package, Truck, type LucideIcon } from 'lucide-react';
 import { siteConfig } from '@/config/site';
+
+const announcementIcons: LucideIcon[] = [Wheat, ShieldCheck, Package, Truck];
 
 export function AnnouncementBar() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,6 +33,8 @@ export function AnnouncementBar() {
 
   if (!isVisible) return null;
 
+  const CurrentIcon = announcementIcons[currentIndex % announcementIcons.length] || Wheat;
+
   return (
     <div className="relative bg-primary-dark text-white text-xs md:text-sm font-medium py-2 px-4 border-b border-primary-light/20 z-40 overflow-hidden">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
@@ -44,7 +48,7 @@ export function AnnouncementBar() {
               transition={{ duration: 0.35, ease: 'easeInOut' }}
               className="flex items-center gap-2 text-center"
             >
-              <Sparkles className="w-3.5 h-3.5 text-accent shrink-0 animate-pulse" />
+              <CurrentIcon className="w-3.5 h-3.5 text-accent shrink-0" />
               <span className="tracking-wide">
                 {siteConfig.announcements[currentIndex]}
               </span>

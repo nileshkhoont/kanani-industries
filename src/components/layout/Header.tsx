@@ -42,7 +42,7 @@ export function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
-            {/* Logo & Sister Concern */}
+            {/* Logo & Second Firm */}
             <div className="flex items-center gap-3 sm:gap-4 shrink-0">
               <Logo size="md" variant="light-surface" />
               <div className="hidden sm:flex items-center border-l border-border/80 pl-3 sm:pl-4 py-0.5">
@@ -135,7 +135,7 @@ export function Header() {
                   })}
                 </nav>
 
-                {/* Sister Concern Brand with GT Logo */}
+                {/* Second Firm Brand with GT Logo */}
                 <div className="px-3.5 py-2.5 rounded-xl bg-surface-alt/70 border border-border/80 flex items-center justify-between">
                   <GaneshTradingLogo size="sm" variant="light-surface" showSisterTag={true} />
                 </div>

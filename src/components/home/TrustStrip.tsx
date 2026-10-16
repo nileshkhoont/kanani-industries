@@ -1,8 +1,8 @@
-import { Sparkles, ShieldCheck, Leaf, Globe2 } from 'lucide-react';
+import { Filter, ShieldCheck, Leaf, Globe2 } from 'lucide-react';
 
 const badges = [
   {
-    icon: Sparkles,
+    icon: Filter,
     title: 'Sortex Cleaned',
     subtitle: '99.8% Color-sorted purity',
   },

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getAllProducts } from '@/lib/products';
 import { ProductListing } from '@/components/product/ProductListing';
-import { Sparkles } from 'lucide-react';
+import { Package } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -21,7 +21,7 @@ export default async function ProductsPage() {
         {/* Banner */}
         <div className="mb-10 text-center sm:text-left">
           <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-secondary">
-            <Sparkles className="w-3.5 h-3.5 text-accent" />
+            <Package className="w-3.5 h-3.5 text-secondary" />
             Direct Mill Catalog
           </span>
           <h1 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-primary-dark tracking-tight mt-1">

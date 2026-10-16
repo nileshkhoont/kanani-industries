@@ -55,17 +55,17 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "Kanani Industries",
   legalName: "Kanani Industries",
-  sisterCompany: "Ganesh Trading",
+  sisterCompany: "Ganesh Trading Co.",
   tagline: "Premier Sortex Toor Milling & Trading",
   description:
     "Leading Gujarat-based processor and trader of premium Sortex-cleaned Toor (Pigeon Peas) under our own trusted brands: Savaj, Ganesh, Nilkanth, and Natural.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://kananiindustries.com",
   logo: {
-    main: "/brand/kanani-logo.png",
-    transparent: "/brand/kanani-logo-transparent.png",
+    main: "/brand/kanani-k-logo.png",
+    transparent: "/brand/kanani-k-logo-transparent.png",
     ogImage: "/brand/og-image.png",
-    icon: "/icon.png",
-    appleIcon: "/apple-icon.png",
+    icon: "/icon-k.png",
+    appleIcon: "/apple-icon-k.png",
   },
   contact: {
     phone: "+918000004462",
@@ -113,10 +113,10 @@ export const siteConfig: SiteConfig = {
     { name: "South Africa", code: "ZA", region: "Africa", flag: "🇿🇦" },
   ],
   announcements: [
-    "🌾 Fresh Gujarat Crop Sortex Toor Now Ready for Wholesale & Retail Dispatch",
-    "✨ Multi-Camera Optical Sortex Cleaned: Guaranteed 99.8% Grain Purity",
-    "📦 Bulk Wholesale & Retail Supply Available Direct From Junagadh Mill",
-    "🚚 Fast Dispatch across India | Trusted Direct Miller Pricing",
+    "Fresh Gujarat Crop Sortex Toor Now Ready for Wholesale & Retail Dispatch",
+    "Multi-Camera Optical Sortex Cleaned: Guaranteed 99.8% Grain Purity",
+    "Bulk Wholesale & Retail Supply Available Direct From Junagadh Mill",
+    "Fast Dispatch across India | Trusted Direct Miller Pricing",
   ],
   freeShippingThreshold: 1999,
 };

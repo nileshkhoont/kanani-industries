@@ -6,9 +6,10 @@ import {
   Eye,
   ShieldCheck,
   HeartHandshake,
-  Sparkles,
+  Award,
   ArrowRight,
 } from 'lucide-react';
+import { GlobalDistributionMap } from '@/components/ui/GlobalDistributionMap';
 
 export const metadata: Metadata = {
   title: 'About Us | Heritage & Sortex Pulse Milling',
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: Sparkles,
+    icon: Award,
     title: 'Uncompromised Sortex Purity',
     description:
       'We reject shortcut chemical polishing and mineral oils. Every grain is cleaned purely through computerized optical color sorting.',
@@ -87,26 +88,19 @@ export default function AboutPage() {
     <div className="py-12 md:py-20">
       {/* Page Header Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="p-8 sm:p-14 rounded-3xl bg-gradient-brand text-white shadow-navy-lg relative overflow-hidden">
-          {/* Ambient decorative glow */}
-          <div
-            aria-hidden="true"
-            className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-secondary/20 blur-3xl pointer-events-none"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-accent/10 blur-3xl pointer-events-none"
-          />
+        <div className="p-8 sm:p-14 rounded-3xl bg-white border border-border/80 shadow-navy-xs relative overflow-hidden min-h-[380px] flex items-center">
+          {/* Animated Global Distribution Map Background */}
+          <GlobalDistributionMap />
 
           <div className="max-w-3xl space-y-4 relative z-10">
-            <span className="inline-block px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-accent border border-white/20">
+            <span className="inline-block px-3.5 py-1.5 rounded-full bg-secondary/10 text-xs font-bold uppercase tracking-widest text-secondary border border-secondary/20">
               Our Heritage &bull; Junagadh, Gujarat
             </span>
-            <h1 className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-white">
+            <h1 className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-primary-dark">
               Rooted in Saurashtra Soil,{' '}
-              <span className="text-accent">Milling Purity for the World.</span>
+              <span className="text-secondary">Milling Purity for the World.</span>
             </h1>
-            <p className="text-base sm:text-lg text-white/90 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-ink-muted leading-relaxed font-normal">
               For over 28 years, Kanani Industries has honored Gujarat’s rich agrarian traditions by
               delivering pristine, Sortex-cleaned Toor (Pigeon Peas) under our own established
               brands: Savaj, Ganesh, Nilkanth, and Natural.

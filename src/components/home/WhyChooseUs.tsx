@@ -1,8 +1,8 @@
-import { Shield, Sparkles, Scale, RefreshCw } from 'lucide-react';
+import { Shield, Leaf, Scale, RefreshCw } from 'lucide-react';
 
 const pillars = [
   {
-    icon: Sparkles,
+    icon: Leaf,
     title: 'Zero Artificial Polish',
     description:
       'Unlike commercially glazed pulses that use mineral oil or excessive water polishing to hide defects, our toor retains its natural golden grain coat, aroma, and high dietary fiber.',

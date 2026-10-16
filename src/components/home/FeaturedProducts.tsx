@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Factory } from 'lucide-react';
 import type { Product } from '@/lib/products';
 import { ProductCard } from '@/components/product/ProductCard';
 
@@ -15,7 +15,7 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="space-y-2">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-secondary">
-              <Sparkles className="w-3.5 h-3.5 text-accent" />
+              <Factory className="w-3.5 h-3.5 text-secondary" />
               Direct From The Miller
             </span>
             <h2 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-primary-dark tracking-tight">

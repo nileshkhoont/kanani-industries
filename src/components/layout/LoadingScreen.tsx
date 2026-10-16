@@ -38,7 +38,7 @@ export function LoadingScreen() {
           >
             <div className="p-4 rounded-3xl bg-white shadow-navy-lg border border-border">
               <Image
-                src="/brand/kanani-logo.png"
+                src="/brand/kanani-k-logo.png"
                 alt="Kanani Industries"
                 width={120}
                 height={120}

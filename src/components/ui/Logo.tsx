@@ -26,8 +26,8 @@ export function Logo({
   const isDarkSurface = variant === 'dark-surface';
   const logoSrc =
     variant === 'transparent'
-      ? '/brand/kanani-logo-transparent.png'
-      : '/brand/kanani-logo.png';
+      ? '/brand/kanani-k-logo-transparent.png'
+      : '/brand/kanani-k-logo.png';
 
   const content = (
     <div
@@ -38,7 +38,7 @@ export function Logo({
           className={`inline-flex items-center justify-center rounded-2xl bg-surface ${currentSize.cardPadding} shadow-navy-md border border-white/20 shrink-0`}
         >
           <Image
-            src="/brand/kanani-logo.png"
+            src="/brand/kanani-k-logo.png"
             alt="Kanani Industries Logo"
             width={currentSize.width}
             height={currentSize.height}

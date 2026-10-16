@@ -1,28 +1,34 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface GaneshTradingLogoProps {
   variant?: 'light-surface' | 'dark-surface' | 'transparent';
   size?: 'xs' | 'sm' | 'md' | 'lg';
   showSisterTag?: boolean;
+  showSecondFirmTag?: boolean;
   className?: string;
   layout?: 'horizontal' | 'compact' | 'emblem-only';
+  asLink?: boolean;
 }
 
 export function GaneshTradingLogo({
   variant = 'light-surface',
   size = 'sm',
   showSisterTag = true,
+  showSecondFirmTag,
   className = '',
   layout = 'horizontal',
+  asLink = true,
 }: GaneshTradingLogoProps) {
   const isDark = variant === 'dark-surface';
+  const shouldShowTag = showSecondFirmTag ?? showSisterTag;
 
   const sizeMap = {
     xs: {
       width: 26,
       height: 26,
       nameText: 'text-xs',
-      subText: 'text-[7.5px]',
+      subText: 'text-[7px]',
       tagText: 'text-[7.5px]',
       gap: 'gap-2',
       ringPad: 'p-0.5',
@@ -31,7 +37,7 @@ export function GaneshTradingLogo({
       width: 36,
       height: 36,
       nameText: 'text-sm',
-      subText: 'text-[9px]',
+      subText: 'text-[8.5px]',
       tagText: 'text-[8.5px]',
       gap: 'gap-2.5',
       ringPad: 'p-0.5',
@@ -40,7 +46,7 @@ export function GaneshTradingLogo({
       width: 44,
       height: 44,
       nameText: 'text-base',
-      subText: 'text-[10px]',
+      subText: 'text-[9.5px]',
       tagText: 'text-[9px]',
       gap: 'gap-3',
       ringPad: 'p-1',
@@ -49,7 +55,7 @@ export function GaneshTradingLogo({
       width: 58,
       height: 58,
       nameText: 'text-xl',
-      subText: 'text-xs',
+      subText: 'text-[11px]',
       tagText: 'text-[10px]',
       gap: 'gap-3.5',
       ringPad: 'p-1.5',
@@ -68,7 +74,7 @@ export function GaneshTradingLogo({
     >
       <Image
         src="/brand/ganesh-trading-emblem-transparent.png"
-        alt="Ganesh Trading GT Logo"
+        alt="Ganesh Trading Co. GT Logo"
         width={currentSize.width}
         height={currentSize.height}
         className="object-contain rounded-full"
@@ -78,25 +84,39 @@ export function GaneshTradingLogo({
   );
 
   if (layout === 'emblem-only') {
-    return (
-      <div className={`inline-flex items-center ${className}`} title="Ganesh Trading (GT)">
+    const emblemContent = (
+      <div className={`inline-flex items-center ${className}`} title="Ganesh Trading Co. (GT)">
         {emblem}
       </div>
     );
+    if (asLink) {
+      return (
+        <Link
+          href="/"
+          aria-label="Ganesh Trading Co. Homepage"
+          className="inline-flex items-center cursor-pointer transition-transform duration-200 hover:opacity-95"
+        >
+          {emblemContent}
+        </Link>
+      );
+    }
+    return emblemContent;
   }
 
-  return (
-    <div className={`inline-flex items-center ${currentSize.gap} ${className}`}>
+  const content = (
+    <div
+      className={`inline-flex items-center ${currentSize.gap} transition-transform duration-200 hover:opacity-95 ${className}`}
+    >
       {emblem}
 
       <div className="flex flex-col justify-center select-none">
-        {showSisterTag && (
+        {shouldShowTag && (
           <span
             className={`font-heading font-bold uppercase tracking-wider leading-none mb-0.5 ${
               currentSize.tagText
             } ${isDark ? 'text-secondary-light' : 'text-secondary'}`}
           >
-            Sister Concern
+            Second Firm
           </span>
         )}
 
@@ -113,10 +133,24 @@ export function GaneshTradingLogo({
               isDark ? 'text-amber-400' : 'text-[#B45309]'
             }`}
           >
-            TRADING
+            TRADING CO.
           </span>
         </div>
       </div>
     </div>
   );
+
+  if (asLink) {
+    return (
+      <Link
+        href="/"
+        aria-label="Ganesh Trading Co. Homepage"
+        className="inline-flex items-center cursor-pointer"
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }

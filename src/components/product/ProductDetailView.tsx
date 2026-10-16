@@ -8,10 +8,10 @@ import {
   PhoneCall,
   ChevronRight,
   ShieldCheck,
-  Sparkles,
   MapPin,
   Clock,
   Award,
+  BadgePercent,
 } from 'lucide-react';
 import type { Product } from '@/lib/products';
 import { formatPrice, calculateDiscount } from '@/lib/format';
@@ -154,18 +154,18 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
           </div>
 
           {/* Highlighted Price Block */}
-          <div className="p-5 rounded-3xl bg-surface-alt border border-border shadow-navy-xs space-y-2">
+          <div className="p-5 rounded-3xl bg-white border border-border/80 shadow-navy-xs space-y-2">
             <div className="flex items-baseline justify-between flex-wrap gap-2">
               <div>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-ink-muted block">
                   Direct Miller Rate
                 </span>
                 <div className="flex items-baseline gap-3 mt-1.5">
-                  <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-accent text-primary-dark font-heading font-black text-2xl shadow-sm">
+                  <div className="flex items-baseline font-heading font-black text-3xl sm:text-4xl text-primary-dark tracking-tight">
                     <span>{formatPrice(product.price)}</span>
-                    <span className="text-sm font-bold text-primary-dark/80 ml-1">/ kg</span>
+                    <span className="text-base font-bold text-ink-muted ml-1.5">/ kg</span>
                   </div>
-                  <span className="line-through text-sm font-semibold text-ink-muted">
+                  <span className="line-through text-base font-semibold text-ink-muted">
                     MRP {formatPrice(product.mrp)}
                   </span>
                 </div>
@@ -180,7 +180,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
             {savingsPerKg > 0 && (
               <div className="flex items-center gap-2 text-xs font-bold text-secondary-dark bg-secondary-light/20 p-2 rounded-xl mt-1">
-                <Sparkles className="w-4 h-4 text-secondary shrink-0" />
+                <BadgePercent className="w-4 h-4 text-secondary shrink-0" />
                 <span>You save {formatPrice(savingsPerKg)}/kg with direct mill rate!</span>
               </div>
             )}
@@ -227,9 +227,9 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-heading font-extrabold text-base shadow-navy-md hover:shadow-navy-lg flex items-center justify-center gap-2.5 transition-all duration-300 hover:scale-[1.01] active:scale-98"
+              className="w-full py-4 px-6 rounded-2xl border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white bg-transparent font-heading font-extrabold text-base flex items-center justify-center gap-2.5 transition-all duration-300 hover:scale-[1.01] active:scale-98 shadow-sm"
             >
-              <MessageCircle className="w-5 h-5 fill-current shrink-0" />
+              <MessageCircle className="w-5 h-5 shrink-0 transition-colors" />
               <span>Order / Enquire on WhatsApp</span>
             </a>
 
@@ -244,7 +244,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
               <Link
                 href="/contact"
-                className="py-3 px-4 rounded-xl bg-primary-dark hover:bg-primary text-white font-heading font-bold text-xs flex items-center justify-center gap-2 transition-colors"
+                className="py-3 px-4 rounded-xl border-2 border-primary-dark text-primary-dark hover:bg-primary-dark hover:text-white bg-transparent font-heading font-bold text-xs flex items-center justify-center gap-2 transition-all duration-200"
               >
                 <span>Bulk Trade Enquiry</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -272,9 +272,9 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 py-3 px-4 rounded-xl bg-[#25D366] text-white font-heading font-bold text-sm shadow-navy-sm flex items-center justify-center gap-2"
+          className="flex-1 py-3 px-4 rounded-xl border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white bg-transparent font-heading font-bold text-sm shadow-sm flex items-center justify-center gap-2 transition-colors"
         >
-          <MessageCircle className="w-4 h-4 fill-current shrink-0" />
+          <MessageCircle className="w-4 h-4 shrink-0 transition-colors" />
           <span>WhatsApp Enquiry</span>
         </a>
       </div>
