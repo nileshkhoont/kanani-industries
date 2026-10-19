@@ -9,7 +9,7 @@ export const revalidate = 0;
 export const metadata: Metadata = {
   title: 'Our Sortex Toor Brands | Buy Online & Bulk Orders',
   description:
-    'Browse Kanani Industries 4 signature Sortex Toor brands: Savaj Brand Janap Toor, Ganesh Brand Varjin Toor, Nilkanth Brand Bidian Toor, and Natural Brand Rasdi Toor.',
+    'Browse Kanani Industries 4 signature Sortex Toor brands: Savaj Brand Japan Toor, Ganesh Brand Varjin Toor, Nilkanth Brand Bidian Toor, and Natural Brand Rasdi Toor.',
 };
 
 export default async function ProductsPage() {

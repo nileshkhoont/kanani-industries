@@ -1,11 +1,11 @@
 [
   {
-    "id": "janap-toor-savaj",
-    "slug": "janap-toor-savaj-brand",
-    "name": "Janap Toor",
+    "id": "japan-toor-savaj",
+    "slug": "japan-toor-savaj-brand",
+    "name": "Japan Toor",
     "brand": "Savaj Brand",
     "shortDescription": "Flagship Gujarat Sortex whole toor with uniform golden grains, high protein, and quick-cooking tenderness.",
-    "description": "Janap Toor under our trusted Savaj Brand represents our signature grade of Sortex-processed pigeon peas. Sourced directly from premier pulse-growing agrarian clusters of Saurashtra and Gujarat, each grain undergoes rigorous multi-stage cleaning and computerized optical color sorting to eliminate discolored seeds, stones, and chaff.\n\nKnown for its radiant golden-yellow hue, consistent grain size, and fast cooking time, Savaj Brand Janap Toor yields an exceptionally creamy texture and authentic aroma. Ideal for everyday household cooking, heritage culinary preparation, and high-volume commercial catering.\n\nHygienically processed and packed with zero artificial colors or synthetic glazing, delivering wholesome plant-based nutrition and high dietary fiber in every serving.",
+    "description": "Japan Toor under our trusted Savaj Brand represents our signature grade of Sortex-processed pigeon peas. Sourced directly from premier pulse-growing agrarian clusters of Saurashtra and Gujarat, each grain undergoes rigorous multi-stage cleaning and computerized optical color sorting to eliminate discolored seeds, stones, and chaff.\n\nKnown for its radiant golden-yellow hue, consistent grain size, and fast cooking time, Savaj Brand Japan Toor yields an exceptionally creamy texture and authentic aroma. Ideal for everyday household cooking, heritage culinary preparation, and high-volume commercial catering.\n\nHygienically processed and packed with zero artificial colors or synthetic glazing, delivering wholesome plant-based nutrition and high dietary fiber in every serving.",
     "price": 165,
     "mrp": 195,
     "unit": "kg",
@@ -15,7 +15,7 @@
       25
     ],
     "images": [
-      "/images/products/janap-toor-savaj/dry-toor.jpg",
+      "/images/products/japan-toor-savaj/dry-toor.jpg",
       "/images/products/shared/dry-toor-macro.jpg",
       "/images/products/shared/mill-facility.jpg"
     ],

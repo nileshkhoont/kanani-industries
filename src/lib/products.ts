@@ -45,10 +45,18 @@ export async function getAllProducts(): Promise<Product[]> {
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
   const products = await getAllProducts();
-  return products.find((p) => p.slug === slug) || null;
+  return (
+    products.find(
+      (p) => p.slug === slug || (p.slug === 'japan-toor-savaj-brand' && slug === 'janap-toor-savaj-brand')
+    ) || null
+  );
 }
 
 export async function getProductById(id: string): Promise<Product | null> {
   const products = await getAllProducts();
-  return products.find((p) => p.id === id) || null;
+  return (
+    products.find(
+      (p) => p.id === id || (p.id === 'japan-toor-savaj' && id === 'janap-toor-savaj')
+    ) || null
+  );
 }
