@@ -79,9 +79,15 @@ export function Footer() {
             <div className="space-y-3 text-sm text-white/80">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-secondary-light shrink-0 mt-1" />
-                <span className="text-xs leading-relaxed">
+                <a
+                  href={siteConfig.contact.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs leading-relaxed hover:text-white transition-colors"
+                  title="View on Google Maps"
+                >
                   {siteConfig.contact.address.full}
-                </span>
+                </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-secondary-light shrink-0" />

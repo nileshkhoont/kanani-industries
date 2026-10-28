@@ -28,6 +28,7 @@ export interface SiteConfig {
       full: string;
     };
     googleMapsEmbedUrl: string;
+    googleMapsUrl: string;
   };
   social: {
     facebook: string;
@@ -83,7 +84,8 @@ export const siteConfig: SiteConfig = {
       full: "Plot No 103(a) G.i.d.c.-1 Dolatpara Junagadh(362001), Gujarat, India",
     },
     googleMapsEmbedUrl:
-      "https://maps.google.com/maps?q=Plot+No+103(a)+G.i.d.c.-1+Dolatpara+Junagadh+362001+Gujarat+India&t=&z=15&ie=UTF8&iwloc=&output=embed",
+      "https://maps.google.com/maps?q=21.5495324,70.4619405+(Kanani+Industries)&t=&z=16&ie=UTF8&iwloc=B&output=embed",
+    googleMapsUrl: "https://maps.app.goo.gl/J3HU6eVFxF9VNZus8",
   },
   social: {
     facebook: "https://facebook.com/kananiindustries",

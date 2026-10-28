@@ -27,7 +27,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="relative aspect-4/3 w-full overflow-hidden bg-surface-alt">
         <Link href={`/products/${product.slug}`} className="block w-full h-full">
           <Image
-            src={product.images[0] || '/images/products/japan-toor-savaj/dry-toor.jpg'}
+            src={product.images[0] || '/images/products/japan-toor-savaj/japan-toor-whole.jpg'}
             alt={`${product.name} - ${product.brand}`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"

@@ -87,6 +87,7 @@ export default function RootLayout({
     url: siteConfig.url,
     logo: `${siteConfig.url}${siteConfig.logo.main}`,
     description: siteConfig.description,
+    hasMap: siteConfig.contact.googleMapsUrl,
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${siteConfig.contact.address.line1}, ${siteConfig.contact.address.line2}`,

@@ -5,6 +5,7 @@ import {
   Clock,
   MessageCircle,
   PhoneCall,
+  ExternalLink,
 } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { ContactForm } from '@/components/contact/ContactForm';
@@ -61,6 +62,15 @@ export default function ContactPage() {
                     <p className="text-xs text-white/70 mt-0.5 leading-relaxed">
                       {siteConfig.contact.address.full}
                     </p>
+                    <a
+                      href={siteConfig.contact.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs text-secondary-light hover:text-accent font-semibold mt-1.5 transition-colors"
+                    >
+                      <span>Get Directions on Google Maps</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
                   </div>
                 </div>
 
@@ -111,7 +121,7 @@ export default function ContactPage() {
             </div>
 
             {/* Google Map Embed */}
-            <div className="rounded-3xl overflow-hidden border border-border shadow-navy-sm bg-white aspect-16/10 relative">
+            <div className="rounded-3xl overflow-hidden border border-border shadow-navy-sm bg-white aspect-16/10 relative group">
               <iframe
                 title="Kanani Industries Facility Location Map"
                 src={siteConfig.contact.googleMapsEmbedUrl}
@@ -123,6 +133,15 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full"
               />
+              <a
+                href={siteConfig.contact.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-3 right-3 px-3 py-1.5 rounded-xl bg-primary-dark/90 hover:bg-primary-dark text-white font-heading font-bold text-xs shadow-md border border-white/20 flex items-center gap-1.5 backdrop-blur-sm transition-all hover:scale-105"
+              >
+                <span>Open in Google Maps</span>
+                <ExternalLink className="w-3.5 h-3.5 text-accent" />
+              </a>
             </div>
           </div>
         </div>
