@@ -357,7 +357,9 @@ export function GlobalDistributionMap({ className = '' }: { className?: string }
   }, []);
 
   return (
-    <div className={`absolute inset-0 pointer-events-none overflow-hidden select-none z-0 ${className}`}>
+    <div
+      className={`absolute inset-0 pointer-events-none overflow-hidden select-none z-0 opacity-25 md:opacity-100 transition-opacity duration-300 ${className}`}
+    >
       {/* Background Image: Clean Green Continents Map */}
       <div className="absolute inset-0 z-0">
         <Image

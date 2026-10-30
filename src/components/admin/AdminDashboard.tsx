@@ -137,11 +137,13 @@ export function AdminDashboard({
   return (
     <div className="py-8 md:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Top Banner & Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-3xl bg-white border border-border shadow-navy-xs mb-8">
-        <div className="flex items-center gap-4">
-          <Logo variant="light-surface" size="md" />
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 sm:p-6 rounded-3xl bg-white border border-border shadow-navy-xs mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4">
+          <div className="shrink-0">
+            <Logo variant="light-surface" size="md" />
+          </div>
           <div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <span className="font-heading font-black text-xl text-primary-dark">
                 Control Center
               </span>
@@ -149,14 +151,14 @@ export function AdminDashboard({
                 Active Session
               </span>
             </div>
-            <p className="text-xs text-ink-muted">
+            <p className="text-xs text-ink-muted mt-1 sm:mt-0">
               Signed in as: <strong className="text-primary-dark">{username}</strong> • Live Price
               Management Only
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 pt-1 sm:pt-0">
           <a
             href="/products"
             target="_blank"
@@ -201,7 +203,7 @@ export function AdminDashboard({
           <div className="flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="font-heading font-bold text-sm text-amber-900">
                   Storage Status: Temporary Serverless /tmp (Not Persistent Across Refreshes)
                 </span>

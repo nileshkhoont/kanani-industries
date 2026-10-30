@@ -77,7 +77,7 @@ export function Logo({
 
   if (asLink) {
     return (
-      <Link href="/" aria-label="Kanani Industries Homepage" className="inline-block">
+      <Link href="/" aria-label="Kanani Industries Homepage" className="inline-block shrink-0">
         {content}
       </Link>
     );
